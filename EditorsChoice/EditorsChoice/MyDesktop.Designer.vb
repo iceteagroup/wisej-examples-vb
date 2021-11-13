@@ -36,10 +36,10 @@ Namespace EditorsChoice
             '
             'MyDesktop
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
             Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
             Me.Name = "MyDesktop"
-            Me.Size = New System.Drawing.Size(775, 838)
+            Me.Size = New System.Drawing.Size(999, 730)
             Me.ResumeLayout(False)
 
         End Sub

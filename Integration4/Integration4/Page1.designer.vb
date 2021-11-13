@@ -48,13 +48,10 @@ Partial Class Page1
         Me.widgetInput.Location = New System.Drawing.Point(27, 45)
         Me.widgetInput.Name = "widgetInput"
         Me.widgetInput.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package1.Integrity = Nothing
         Package1.Name = "jquery.min.js"
         Package1.Source = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
-        Package2.Integrity = Nothing
         Package2.Name = "jqx-all.js"
         Package2.Source = "https://jqwidgets.com/public/jqwidgets/jqx-all.js"
-        Package3.Integrity = Nothing
         Package3.Name = "jqx.base.css"
         Package3.Source = "https://jqwidgets.com/public/jqwidgets/styles/jqx.base.css"
         Me.widgetInput.Packages.Add(Package1)
@@ -114,7 +111,7 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.widgetTagCloud)
         Me.Controls.Add(Me.widgetTreeMap)
@@ -122,7 +119,7 @@ Partial Class Page1
         Me.Controls.Add(Me.widgetColorPicker)
         Me.Controls.Add(Me.widgetInput)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(828, 731)
+        Me.Size = New System.Drawing.Size(1478, 647)
         Me.Text = "Integration 4 - jQWidgets"
         Me.ResumeLayout(False)
         Me.PerformLayout()

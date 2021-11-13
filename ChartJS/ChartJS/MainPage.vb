@@ -58,12 +58,12 @@ Public Partial Class MainPage
             CreateColors(dataSet)
         End Sub
 
-        Private Sub ChartsPage_Load(ByVal sender As Object, ByVal e As EventArgs)
-            Randomize()
-        End Sub
+    Private Sub ChartsPage_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        Randomize()
+    End Sub
 
-        Private Sub chartJS_ChartClick(ByVal sender As Object, ByVal e As ChartClickEventArgs)
-            AlertBox.Show("<br>" & CType(sender, Control).Text & ":</b> " & e.Values(0), MessageBoxIcon.Information, alignment:=ContentAlignment.MiddleRight)
-        End Sub
-    End Class
+    Private Sub chartJS_ChartClick(ByVal sender As Object, ByVal e As ChartClickEventArgs) Handles chartJS6.ChartClick, chartJS5.ChartClick, chartJS4.ChartClick, chartJS3.ChartClick, chartJS2.ChartClick, chartJS1.ChartClick
+        AlertBox.Show("<br>" & CType(sender, Control).Text & ":</b> " & e.Values(0), MessageBoxIcon.Information, alignment:=ContentAlignment.MiddleRight)
+    End Sub
+End Class
 

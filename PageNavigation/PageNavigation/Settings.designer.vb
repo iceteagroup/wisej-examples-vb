@@ -46,7 +46,7 @@ Partial Class Settings
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(50, 100)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(65, 15)
+        Me.label1.Size = New System.Drawing.Size(66, 15)
         Me.label1.TabIndex = 0
         Me.label1.Text = "First name"
         '
@@ -101,7 +101,7 @@ Partial Class Settings
         Me.label4.AutoSize = True
         Me.label4.Location = New System.Drawing.Point(50, 295)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(65, 15)
+        Me.label4.Size = New System.Drawing.Size(66, 15)
         Me.label4.TabIndex = 6
         Me.label4.Text = "Telephone"
         '
@@ -113,7 +113,7 @@ Partial Class Settings
         Me.titleLabel.ForeColor = System.Drawing.Color.FromName("@buttonText")
         Me.titleLabel.Location = New System.Drawing.Point(0, 0)
         Me.titleLabel.Name = "titleLabel"
-        Me.titleLabel.Size = New System.Drawing.Size(845, 40)
+        Me.titleLabel.Size = New System.Drawing.Size(1092, 40)
         Me.titleLabel.TabIndex = 8
         Me.titleLabel.Text = "User settings"
         Me.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -144,7 +144,7 @@ Partial Class Settings
         '
         'Settings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.errorButton)
         Me.Controls.Add(Me.close)
@@ -159,7 +159,7 @@ Partial Class Settings
         Me.Controls.Add(Me.textBox1)
         Me.Controls.Add(Me.label1)
         Me.Name = "Settings"
-        Me.Size = New System.Drawing.Size(845, 586)
+        Me.Size = New System.Drawing.Size(1092, 756)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

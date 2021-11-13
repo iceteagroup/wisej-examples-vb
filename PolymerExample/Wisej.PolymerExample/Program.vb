@@ -9,7 +9,7 @@ Module Program
     ''' <remarks></remarks>
     Public Sub Main()
 
-        Application.MainPage = New Page1()
+        Application.MainPage = new Page1()
 
     End Sub
 

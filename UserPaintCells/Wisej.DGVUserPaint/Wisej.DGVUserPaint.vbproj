@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Wisej.DGVUserPaint</RootNamespace>
     <AssemblyName>Wisej.DGVUserPaint</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -22,6 +22,7 @@
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
     <ProjectGuid>{C0BA60E3-B11F-4E8D-B2C2-AD2CBD91F63B}</ProjectGuid>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,7 +57,6 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Wisej.Framework" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Themes\" />
@@ -137,6 +137,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Wisej-2">
+      <Version>2.5.20</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

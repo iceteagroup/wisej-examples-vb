@@ -27,10 +27,10 @@ Partial Public Class Page1
         Return data
     End Function
 
-    Private Sub widget1_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs)
+    Private Sub widget1_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs) Handles widget1.WidgetEvent
         Select Case e.Type
             Case "nodeClick"
-                AlertBox.Show("You clicked: " & e.Data)
+                AlertBox.Show("You clicked: " & e.Data.ToString())
         End Select
     End Sub
 

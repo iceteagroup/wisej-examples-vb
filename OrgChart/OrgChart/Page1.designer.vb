@@ -27,9 +27,9 @@
     ''' </summary>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Page1))
-        Dim Package1 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
-        Dim Package2 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
-        Dim Package3 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package4 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package5 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package6 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
         Me.widget1 = New Wisej.Web.Widget()
         Me.button1 = New Wisej.Web.Button()
         Me.SuspendLayout()
@@ -41,18 +41,15 @@
         Me.widget1.Location = New System.Drawing.Point(136, 137)
         Me.widget1.Name = "widget1"
         Me.widget1.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package1.Integrity = Nothing
-        Package1.Name = "jquery.js"
-        Package1.Source = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-        Package2.Integrity = Nothing
-        Package2.Name = "orgchart.js"
-        Package2.Source = "https://rawgit.com/dabeng/OrgChart/master/dist/js/jquery.orgchart.js"
-        Package3.Integrity = Nothing
-        Package3.Name = "orgchart.css"
-        Package3.Source = "https://rawgit.com/dabeng/OrgChart/master/dist/css/jquery.orgchart.css"
-        Me.widget1.Packages.Add(Package1)
-        Me.widget1.Packages.Add(Package2)
-        Me.widget1.Packages.Add(Package3)
+        Package4.Name = "jquery.js"
+        Package4.Source = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        Package5.Name = "orgchart.js"
+        Package5.Source = "https://rawgit.com/dabeng/OrgChart/master/dist/js/jquery.orgchart.js"
+        Package6.Name = "orgchart.css"
+        Package6.Source = "https://rawgit.com/dabeng/OrgChart/master/dist/css/jquery.orgchart.css"
+        Me.widget1.Packages.Add(Package4)
+        Me.widget1.Packages.Add(Package5)
+        Me.widget1.Packages.Add(Package6)
         Me.widget1.Size = New System.Drawing.Size(661, 523)
         Me.widget1.TabIndex = 0
         Me.widget1.Text = "widget1"
@@ -67,12 +64,12 @@
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.button1)
         Me.Controls.Add(Me.widget1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(842, 838)
+        Me.Size = New System.Drawing.Size(1343, 445)
         Me.Text = "Page1"
         Me.ResumeLayout(False)
 

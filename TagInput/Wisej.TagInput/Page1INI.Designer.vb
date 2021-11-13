@@ -22,11 +22,12 @@ Partial Class Page1INI
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Page1
+        'Page1INI
         '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(613, 432)
-        Me.Name = "Page1"
+        Me.Name = "Page1INI"
+        Me.Size = New System.Drawing.Size(1511, 669)
         Me.Text = "Page1"
         Me.ResumeLayout(False)
 

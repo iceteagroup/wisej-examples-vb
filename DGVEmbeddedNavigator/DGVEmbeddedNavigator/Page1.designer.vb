@@ -54,12 +54,12 @@
             '
             'Page1
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
             Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
             Me.Controls.Add(Me.buttonNavigationPanel)
             Me.Controls.Add(Me.buttonEmbeddedBindingNavigator)
             Me.Name = "Page1"
-            Me.Size = New System.Drawing.Size(854, 838)
+            Me.Size = New System.Drawing.Size(1000, 820)
             Me.ResumeLayout(False)
 
         End Sub

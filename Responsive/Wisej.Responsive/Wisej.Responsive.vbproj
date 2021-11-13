@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Wisej.Responsive</RootNamespace>
     <AssemblyName>Wisej.Responsive</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -22,6 +22,7 @@
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
     <ProjectGuid>{C158D683-6DF6-43F0-B938-CEAB0857028E}</ProjectGuid>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +48,6 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -56,24 +56,6 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Wisej.Ext.ElegantIcons, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Wisej.Ext.ElegantIcons.dll</HintPath>
-    </Reference>
-    <Reference Include="Wisej.Ext.MaterialDesign, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Wisej.Ext.MaterialDesign.dll</HintPath>
-    </Reference>
-    <Reference Include="Wisej.Ext.ModernUI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Wisej.Ext.ModernUI.dll</HintPath>
-    </Reference>
-    <Reference Include="Wisej.Framework" />
-    <Reference Include="Wisej.Web.Ext.AspNetControl, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
-    <Reference Include="Wisej.Web.Ext.ChartJS, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
-    <Reference Include="Wisej.Web.Ext.FullCalendar, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Wisej.Web.Ext.JustGage, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
-    <Reference Include="Wisej.Web.Ext.ProgressCircle, Version=2.0.0.0, Culture=neutral, PublicKeyToken=653fbd0440795259, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -104,6 +86,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
       <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
@@ -219,6 +202,35 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Wisej-2">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-AspNetControl">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-ChartJs">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-ElegantIcons">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-FullCalendar">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-JustGage">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-MaterialDesign">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-ModernUI">
+      <Version>2.5.20</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej-2-ProgressCircle">
+      <Version>2.5.20</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

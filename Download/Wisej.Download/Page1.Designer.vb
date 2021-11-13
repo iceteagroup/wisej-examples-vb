@@ -91,7 +91,7 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.button4)
         Me.Controls.Add(Me.button3)
@@ -99,7 +99,7 @@ Partial Class Page1
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.button1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(929, 583)
+        Me.Size = New System.Drawing.Size(1025, 820)
         Me.Text = "Page1"
         Me.ResumeLayout(False)
 

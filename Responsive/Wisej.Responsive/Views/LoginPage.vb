@@ -16,7 +16,7 @@ Namespace Views
             End If
         End Sub
 
-        Private Sub buttonLogin_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Private Sub buttonLogin_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonLogin.Click
             Login()
         End Sub
 
@@ -44,7 +44,7 @@ Namespace Views
             End If
         End Sub
 
-        Private Sub LoginPage_ResponsiveProfileChanged(ByVal sender As Object, ByVal e As ResponsiveProfileChangedEventArgs)
+        Private Sub LoginPage_ResponsiveProfileChanged(ByVal sender As Object, ByVal e As ResponsiveProfileChangedEventArgs) Handles MyBase.ResponsiveProfileChanged
             If Width <= 450 Then
                 ' Phone
                 helpTip.Active = False
@@ -76,7 +76,7 @@ Namespace Views
             End If
         End Sub
 
-        Private Sub LoginPage_Load(ByVal sender As Object, ByVal e As EventArgs)
+        Private Sub LoginPage_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
             MessageBox.Show("To test Wisej responsive features, activate Developer Tools in your browser and try device emulation." & Microsoft.VisualBasic.Constants.vbCrLf & " Enter an arbitrary user name to login.", "Wisej Reponsive Features", MessageBoxButtons.OK)
         End Sub
     End Class

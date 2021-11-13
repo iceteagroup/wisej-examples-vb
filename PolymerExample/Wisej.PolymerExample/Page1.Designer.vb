@@ -38,13 +38,13 @@ Partial Class Page1
         Me.label3 = New Wisej.Web.Label()
         Me.label4 = New Wisej.Web.Label()
         Me.styleSheet = New Wisej.Web.StyleSheet(Me.components)
-        Me.paperButton1 = New Wisej.PolymerExample.PaperButton()
         Me.polymerComponent1 = New Wisej.Web.Ext.Polymer.PolymerComponent(Me.components)
         Me.googleChart1 = New Wisej.PolymerExample.GoogleChart()
         Me.paperRadioButton2 = New Wisej.PolymerExample.PaperRadioButton()
         Me.paperRadioButton1 = New Wisej.PolymerExample.PaperRadioButton()
         Me.paperRadioGroup1 = New Wisej.PolymerExample.PaperRadioGroup()
         Me.ironIcon1 = New Wisej.PolymerExample.IronIcon()
+        Me.paperButton1 = New Wisej.PolymerExample.PaperButton()
         Me.paperProgress1 = New Wisej.PolymerExample.PaperProgress()
         Me.paperSlider1 = New Wisej.PolymerExample.PaperSlider()
         Me.paperCheckBox1 = New Wisej.PolymerExample.PaperCheckBox()
@@ -66,7 +66,7 @@ Partial Class Page1
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(43, 48)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(175, 15)
+        Me.label1.Size = New System.Drawing.Size(176, 15)
         Me.label1.TabIndex = 5
         Me.label1.Text = "Polymer Created on the Page"
         '
@@ -119,18 +119,6 @@ Partial Class Page1
         '
         Me.styleSheet.Styles = resources.GetString("styleSheet.Styles")
         '
-        'paperButton1
-        '
-        Me.styleSheet.SetCssClass(Me.paperButton1, "paper")
-        Me.paperButton1.ElementClassName = "circle red"
-        Me.paperButton1.Location = New System.Drawing.Point(43, 408)
-        Me.paperButton1.Name = "paperButton1"
-        Me.paperButton1.Size = New System.Drawing.Size(115, 115)
-        Me.paperButton1.TabIndex = 14
-        Me.paperButton1.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<div style=""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    text-align:center;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    position:relative;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    top:50%;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   " &
-    " transform:translateY(-50%)"">" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<iron-icon icon=""file-download""></iron-icon>Click" &
-    " Me" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "</div>"
-        '
         'polymerComponent1
         '
         Me.polymerComponent1.Imports = New String() {"iron-icons/iron-icons.html", "iron-icons/maps-icons.html"}
@@ -180,6 +168,18 @@ Partial Class Page1
         Me.ironIcon1.Size = New System.Drawing.Size(115, 82)
         Me.ironIcon1.TabIndex = 15
         '
+        'paperButton1
+        '
+        Me.styleSheet.SetCssClass(Me.paperButton1, "paper")
+        Me.paperButton1.ElementClassName = "circle red"
+        Me.paperButton1.Location = New System.Drawing.Point(43, 408)
+        Me.paperButton1.Name = "paperButton1"
+        Me.paperButton1.Size = New System.Drawing.Size(115, 115)
+        Me.paperButton1.TabIndex = 14
+        Me.paperButton1.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<div style=""" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    text-align:center;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    position:relative;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    top:50%;" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   " &
+    " transform:translateY(-50%)"">" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<iron-icon icon=""file-download""></iron-icon>Click" &
+    " Me" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "</div>"
+        '
         'paperProgress1
         '
         Me.paperProgress1.ElementClassName = "green"
@@ -207,7 +207,7 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.Controls.Add(Me.googleChart1)
@@ -227,7 +227,7 @@ Partial Class Page1
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.polymerWidget1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(893, 569)
+        Me.Size = New System.Drawing.Size(1102, 723)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

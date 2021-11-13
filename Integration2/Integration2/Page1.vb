@@ -46,11 +46,10 @@ Partial Public Class Page1
         dataGridViewSearchEngines.Columns(2).DataPropertyName = "frequency"
         ' bind to data
         dataGridViewSearchEngines.DataSource = New BindingSource(dtSearchEngines, Nothing)
-        AddHandler dataGridViewSearchEngines.CellClick, AddressOf DataGridView1_CellClick
         Creating = False
     End Sub
 
-    Private Sub DataGridView1_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
+    Private Sub DataGridView1_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles dataGridViewSearchEngines.CellClick
         ' handle link column
         If e.ColumnIndex = 1 Then
             ' only if the link is clicked, not somewhere else in the cell
@@ -68,7 +67,7 @@ Partial Public Class Page1
     ''' </summary>
     ''' <paramname="sender"></param>
     ''' <paramname="e"></param>
-    Private Sub widgetTagCloud_WebRequest(ByVal sender As Object, ByVal e As WebRequestEventArgs)
+    Private Sub widgetTagCloud_WebRequest(ByVal sender As Object, ByVal e As WebRequestEventArgs) Handles widgetTagCloud.WebRequest
         e.Response.ContentType = "application /json"
         e.Response.Write(DataTableToJson(dtSearchEngines))
     End Sub
@@ -101,7 +100,7 @@ Partial Public Class Page1
     ''' </summary>
     ''' <paramname="sender"></param>
     ''' <paramname="e"></param>
-    Private Sub dataGridViewSearchEngines_CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
+    Private Sub dataGridViewSearchEngines_CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles dataGridViewSearchEngines.CellValueChanged
         If e.ColumnIndex = 2 AndAlso Not Creating Then
             ' empty cell -> 1
             If dtSearchEngines.Rows(e.RowIndex)("frequency") Is DBNull.Value Then dtSearchEngines.Rows(e.RowIndex)("frequency") = 1
@@ -125,7 +124,7 @@ Partial Public Class Page1
     ''' </summary>
     ''' <paramname="sender"></param>
     ''' <paramname="e"></param>
-    Private Sub dataGridViewSearchEngines_RowsAdded(ByVal sender As Object, ByVal e As DataGridViewRowsAddedEventArgs)
+    Private Sub dataGridViewSearchEngines_RowsAdded(ByVal sender As Object, ByVal e As DataGridViewRowsAddedEventArgs) Handles dataGridViewSearchEngines.RowsAdded
         For i = 0 To dataGridViewSearchEngines.Rows.Count - 1
             Dim sfSlider As SFSlider = New SFSlider() With {
                 .Value = Convert.ToInt32(dtSearchEngines.Rows(i)("frequency"))
@@ -165,7 +164,7 @@ Partial Public Class Page1
     ''' </summary>
     ''' <paramname="sender"></param>
     ''' <paramname="e"></param>
-    Private Sub widgetTagCloud_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs)
+    Private Sub widgetTagCloud_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs) Handles widgetTagCloud.WidgetEvent
         AlertBox.Show("clicked on " & e.Data.url & ": " + e.Data.text)
     End Sub
 

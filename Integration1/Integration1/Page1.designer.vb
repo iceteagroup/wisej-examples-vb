@@ -46,6 +46,12 @@ Partial Class Page1
         Dim Package16 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
         Dim Package17 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
         Dim Package18 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package19 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package20 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package21 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package22 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package23 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
+        Dim Package24 As Wisej.Web.Widget.Package = New Wisej.Web.Widget.Package()
         Me.widgetPivotGrid = New Wisej.Web.Widget()
         Me.tabControl1 = New Wisej.Web.TabControl()
         Me.tabPage1 = New Wisej.Web.TabPage()
@@ -76,22 +82,16 @@ Partial Class Page1
         Me.widgetPivotGrid.Location = New System.Drawing.Point(0, 0)
         Me.widgetPivotGrid.Name = "widgetPivotGrid"
         Me.widgetPivotGrid.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package1.Integrity = Nothing
         Package1.Name = "jquery.js"
         Package1.Source = "https://code.jquery.com/jquery-3.1.0.min.js"
-        Package2.Integrity = Nothing
         Package2.Name = "jszip.js"
         Package2.Source = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
-        Package3.Integrity = Nothing
         Package3.Name = "dxall.js"
         Package3.Source = "https://cdn3.devexpress.com/jslib/16.2.6/js/dx.all.js"
-        Package4.Integrity = Nothing
         Package4.Name = "dxspa.css"
         Package4.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.spa.css"
-        Package5.Integrity = Nothing
         Package5.Name = "dxcommon.css"
         Package5.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.common.css"
-        Package6.Integrity = Nothing
         Package6.Name = "dxlight.css"
         Package6.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.light.css"
         Me.widgetPivotGrid.Packages.Add(Package1)
@@ -100,7 +100,7 @@ Partial Class Page1
         Me.widgetPivotGrid.Packages.Add(Package4)
         Me.widgetPivotGrid.Packages.Add(Package5)
         Me.widgetPivotGrid.Packages.Add(Package6)
-        Me.widgetPivotGrid.Size = New System.Drawing.Size(691, 648)
+        Me.widgetPivotGrid.Size = New System.Drawing.Size(949, 606)
         Me.widgetPivotGrid.TabIndex = 0
         Me.widgetPivotGrid.Text = "widget1"
         '
@@ -116,7 +116,7 @@ Partial Class Page1
         Me.tabControl1.Location = New System.Drawing.Point(89, 77)
         Me.tabControl1.Name = "tabControl1"
         Me.tabControl1.PageInsets = New Wisej.Web.Padding(1, 30, 1, 1)
-        Me.tabControl1.Size = New System.Drawing.Size(693, 679)
+        Me.tabControl1.Size = New System.Drawing.Size(951, 637)
         Me.tabControl1.TabIndex = 1
         '
         'tabPage1
@@ -124,7 +124,7 @@ Partial Class Page1
         Me.tabPage1.Controls.Add(Me.widgetPivotGrid)
         Me.tabPage1.Location = New System.Drawing.Point(1, 30)
         Me.tabPage1.Name = "tabPage1"
-        Me.tabPage1.Size = New System.Drawing.Size(691, 648)
+        Me.tabPage1.Size = New System.Drawing.Size(949, 606)
         Me.tabPage1.Text = "dxPivotGrid"
         '
         'tabPage2
@@ -132,7 +132,7 @@ Partial Class Page1
         Me.tabPage2.Controls.Add(Me.tableLayoutPanel1)
         Me.tabPage2.Location = New System.Drawing.Point(1, 30)
         Me.tabPage2.Name = "tabPage2"
-        Me.tabPage2.Size = New System.Drawing.Size(691, 648)
+        Me.tabPage2.Size = New System.Drawing.Size(949, 606)
         Me.tabPage2.Text = "dxCircularGauge"
         '
         'tableLayoutPanel1
@@ -150,7 +150,7 @@ Partial Class Page1
         Me.tableLayoutPanel1.RowCount = 1
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Percent, 100.0!))
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 20.0!))
-        Me.tableLayoutPanel1.Size = New System.Drawing.Size(691, 648)
+        Me.tableLayoutPanel1.Size = New System.Drawing.Size(949, 606)
         Me.tableLayoutPanel1.TabIndex = 1
         Me.tableLayoutPanel1.TabStop = True
         '
@@ -161,22 +161,16 @@ Partial Class Page1
         Me.widgetCircularGage.Location = New System.Drawing.Point(3, 3)
         Me.widgetCircularGage.Name = "widgetCircularGage"
         Me.widgetCircularGage.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package7.Integrity = Nothing
         Package7.Name = "jquery.js"
         Package7.Source = "https://code.jquery.com/jquery-3.1.0.min.js"
-        Package8.Integrity = Nothing
         Package8.Name = "jszip.js"
         Package8.Source = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
-        Package9.Integrity = Nothing
         Package9.Name = "dxall.js"
         Package9.Source = "https://cdn3.devexpress.com/jslib/16.2.6/js/dx.all.js"
-        Package10.Integrity = Nothing
         Package10.Name = "dxspa.css"
         Package10.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.spa.css"
-        Package11.Integrity = Nothing
         Package11.Name = "dxcommon.css"
         Package11.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.common.css"
-        Package12.Integrity = Nothing
         Package12.Name = "dxlight.css"
         Package12.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.light.css"
         Me.widgetCircularGage.Packages.Add(Package7)
@@ -185,7 +179,7 @@ Partial Class Page1
         Me.widgetCircularGage.Packages.Add(Package10)
         Me.widgetCircularGage.Packages.Add(Package11)
         Me.widgetCircularGage.Packages.Add(Package12)
-        Me.widgetCircularGage.Size = New System.Drawing.Size(546, 642)
+        Me.widgetCircularGage.Size = New System.Drawing.Size(753, 600)
         Me.widgetCircularGage.TabIndex = 0
         Me.widgetCircularGage.Text = "widget2"
         '
@@ -193,7 +187,7 @@ Partial Class Page1
         '
         Me.btnHeatUp.Anchor = Wisej.Web.AnchorStyles.Top
         Me.btnHeatUp.ImageSource = "window-maximize"
-        Me.btnHeatUp.Location = New System.Drawing.Point(647, 15)
+        Me.btnHeatUp.Location = New System.Drawing.Point(892, 15)
         Me.btnHeatUp.Margin = New Wisej.Web.Padding(15)
         Me.btnHeatUp.Name = "btnHeatUp"
         Me.btnHeatUp.Repeat = True
@@ -204,7 +198,7 @@ Partial Class Page1
         '
         Me.btnCoolDown.Anchor = Wisej.Web.AnchorStyles.Top
         Me.btnCoolDown.ImageSource = "window-minimize"
-        Me.btnCoolDown.Location = New System.Drawing.Point(578, 15)
+        Me.btnCoolDown.Location = New System.Drawing.Point(798, 15)
         Me.btnCoolDown.Margin = New Wisej.Web.Padding(15)
         Me.btnCoolDown.Name = "btnCoolDown"
         Me.btnCoolDown.Repeat = True
@@ -217,7 +211,7 @@ Partial Class Page1
         Me.tabPage3.Location = New System.Drawing.Point(1, 30)
         Me.tabPage3.Name = "tabPage3"
         Me.tabPage3.Padding = New Wisej.Web.Padding(3)
-        Me.tabPage3.Size = New System.Drawing.Size(691, 648)
+        Me.tabPage3.Size = New System.Drawing.Size(949, 606)
         Me.tabPage3.Text = "dxGallery"
         '
         'widgetGallery
@@ -227,31 +221,25 @@ Partial Class Page1
         Me.widgetGallery.Location = New System.Drawing.Point(3, 3)
         Me.widgetGallery.Name = "widgetGallery"
         Me.widgetGallery.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package13.Integrity = Nothing
-        Package13.Name = Nothing
-        Package13.Source = Nothing
-        Package14.Integrity = Nothing
-        Package14.Name = Nothing
-        Package14.Source = Nothing
-        Package15.Integrity = Nothing
-        Package15.Name = Nothing
-        Package15.Source = Nothing
-        Package16.Integrity = Nothing
-        Package16.Name = Nothing
-        Package16.Source = Nothing
-        Package17.Integrity = Nothing
-        Package17.Name = Nothing
-        Package17.Source = Nothing
-        Package18.Integrity = Nothing
-        Package18.Name = Nothing
-        Package18.Source = Nothing
+        Package13.Name = "jquery.js"
+        Package13.Source = "https://code.jquery.com/jquery-3.1.0.min.js"
+        Package14.Name = "jszip.js"
+        Package14.Source = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+        Package15.Name = "dxall.js"
+        Package15.Source = "https://cdn3.devexpress.com/jslib/16.2.6/js/dx.all.js"
+        Package16.Name = "dxspa.css"
+        Package16.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.spa.css"
+        Package17.Name = "dxcommon.css"
+        Package17.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.common.css"
+        Package18.Name = "dxlight.css"
+        Package18.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.light.css"
         Me.widgetGallery.Packages.Add(Package13)
         Me.widgetGallery.Packages.Add(Package14)
         Me.widgetGallery.Packages.Add(Package15)
         Me.widgetGallery.Packages.Add(Package16)
         Me.widgetGallery.Packages.Add(Package17)
         Me.widgetGallery.Packages.Add(Package18)
-        Me.widgetGallery.Size = New System.Drawing.Size(685, 642)
+        Me.widgetGallery.Size = New System.Drawing.Size(943, 600)
         Me.widgetGallery.TabIndex = 0
         Me.widgetGallery.Text = "widget1"
         '
@@ -261,7 +249,7 @@ Partial Class Page1
         Me.tabPage4.Location = New System.Drawing.Point(1, 30)
         Me.tabPage4.Name = "tabPage4"
         Me.tabPage4.Padding = New Wisej.Web.Padding(3)
-        Me.tabPage4.Size = New System.Drawing.Size(691, 648)
+        Me.tabPage4.Size = New System.Drawing.Size(949, 606)
         Me.tabPage4.Text = "dxBarGauge"
         '
         'tableLayoutPanel2
@@ -276,7 +264,7 @@ Partial Class Page1
         Me.tableLayoutPanel2.Name = "tableLayoutPanel2"
         Me.tableLayoutPanel2.RowCount = 1
         Me.tableLayoutPanel2.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel2.Size = New System.Drawing.Size(685, 642)
+        Me.tableLayoutPanel2.Size = New System.Drawing.Size(943, 600)
         Me.tableLayoutPanel2.TabIndex = 1
         Me.tableLayoutPanel2.TabStop = True
         '
@@ -287,7 +275,25 @@ Partial Class Page1
         Me.widgetBarGauge.Location = New System.Drawing.Point(3, 3)
         Me.widgetBarGauge.Name = "widgetBarGauge"
         Me.widgetBarGauge.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetBarGauge.Size = New System.Drawing.Size(542, 636)
+        Package19.Name = "jquery.js"
+        Package19.Source = "https://code.jquery.com/jquery-3.1.0.min.js"
+        Package20.Name = "jszip.js"
+        Package20.Source = "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+        Package21.Name = "dxall.js"
+        Package21.Source = "https://cdn3.devexpress.com/jslib/16.2.6/js/dx.all.js"
+        Package22.Name = "dxspa.css"
+        Package22.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.spa.css"
+        Package23.Name = "dxcommon.css"
+        Package23.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.common.css"
+        Package24.Name = "dxlight.css"
+        Package24.Source = "https://cdn3.devexpress.com/jslib/16.2.6/css/dx.light.css"
+        Me.widgetBarGauge.Packages.Add(Package19)
+        Me.widgetBarGauge.Packages.Add(Package20)
+        Me.widgetBarGauge.Packages.Add(Package21)
+        Me.widgetBarGauge.Packages.Add(Package22)
+        Me.widgetBarGauge.Packages.Add(Package23)
+        Me.widgetBarGauge.Packages.Add(Package24)
+        Me.widgetBarGauge.Size = New System.Drawing.Size(748, 594)
         Me.widgetBarGauge.TabIndex = 0
         Me.widgetBarGauge.Text = "widget1"
         '
@@ -295,7 +301,7 @@ Partial Class Page1
         '
         Me.comboBox1.AutoSize = False
         Me.comboBox1.Items.AddRange(New Object() {"Default", "Soft Pastel", "Harmony Light", "Pastel", "Bright", "Soft", "Ocean", "Vintage", "Violet"})
-        Me.comboBox1.Location = New System.Drawing.Point(563, 15)
+        Me.comboBox1.Location = New System.Drawing.Point(769, 15)
         Me.comboBox1.Margin = New Wisej.Web.Padding(15)
         Me.comboBox1.Name = "comboBox1"
         Me.comboBox1.Size = New System.Drawing.Size(62, 34)
@@ -303,11 +309,11 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.tabControl1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(877, 838)
+        Me.Size = New System.Drawing.Size(1135, 796)
         Me.Text = "Page1"
         Me.tabControl1.ResumeLayout(False)
         Me.tabPage1.ResumeLayout(False)

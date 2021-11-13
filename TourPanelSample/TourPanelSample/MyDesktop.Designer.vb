@@ -35,7 +35,7 @@ Partial Class MyDesktop
         Me.toolBar1.Buttons.AddRange(New Wisej.Web.ToolBarButton() {Me.toolBarButton1, Me.toolBarButton2})
         Me.toolBar1.Location = New System.Drawing.Point(0, 0)
         Me.toolBar1.Name = "toolBar1"
-        Me.toolBar1.Size = New System.Drawing.Size(1058, 66)
+        Me.toolBar1.Size = New System.Drawing.Size(931, 66)
         Me.toolBar1.TabIndex = 0
         Me.toolBar1.TabStop = False
         '
@@ -54,11 +54,11 @@ Partial Class MyDesktop
         '
         'MyDesktop
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.toolBar1)
         Me.Name = "MyDesktop"
-        Me.Size = New System.Drawing.Size(1058, 838)
+        Me.Size = New System.Drawing.Size(931, 827)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -39,6 +39,5 @@
 //                             Custom settings are available using Application.Configuration.Settings.
 {
 	"url": "Default.html",
-	"showLoader": false,
 	"startup": "Wisej.Responsive.Program.Main, Wisej.Responsive"
 }

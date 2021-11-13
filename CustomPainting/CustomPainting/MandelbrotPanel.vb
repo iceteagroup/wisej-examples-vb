@@ -2,14 +2,14 @@
 Imports System.Drawing
 Imports Wisej.Web
 
-Partial Public Class MandelbrotPanel
-    Inherits UserControl
+Public Class MandelbrotPanel
+
 
     Public Sub New()
         InitializeComponent()
     End Sub
 
-    Private Sub MandelbrotPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs)
+    Private Sub MandelbrotPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MyBase.Paint
         m_Xmin = MIN_X
         m_Xmax = MAX_X
         m_Ymin = MIN_Y

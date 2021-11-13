@@ -1,15 +1,9 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Window1
     Inherits Wisej.Web.Form
-    ''' <summary>
-    ''' Required designer variable.
-    ''' </summary>
-    Private components As ComponentModel.IContainer
 
-    ''' <summary>
-    ''' Clean up any resources being used.
-    ''' </summary>
-    ''' <paramname="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,136 +14,121 @@ Partial Class Window1
         End Try
     End Sub
 
+    'Required by the Wisej Designer
+    Private components As System.ComponentModel.IContainer
 
-#Region "Windows Form Designer generated code"
-
-    ''' <summary>
-    ''' Required method for Designer support - do not modify
-    ''' the contents of this method with the code editor.
-    ''' </summary>
+    'NOTE: The following procedure is required by the Wisej Designer
+    'It can be modified using the Wisej Designer.  
+    'Do not modify it using the code editor.
     Private Sub InitializeComponent()
-        components = New ComponentModel.Container()
-        pictureBox = New Wisej.Web.PictureBox()
-        label1 = New Wisej.Web.Label()
-        upload1 = New Wisej.Web.Upload()
-        label2 = New Wisej.Web.Label()
-        flowLayoutPanel = New Wisej.Web.FlowLayoutPanel()
-        upload2 = New Wisej.Web.Upload()
-        buttonClear = New Wisej.Web.Button()
-        helpTip = New Wisej.Web.HelpTip(components)
-        CType(pictureBox, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' pictureBox
-        ' 
-        pictureBox.AllowDrop = True
-        pictureBox.Anchor = Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left
-        pictureBox.BorderStyle = Wisej.Web.BorderStyle.Solid
-        helpTip.SetHelpTip(pictureBox, Nothing)
-        pictureBox.Location = New Drawing.Point(22, 53)
-        pictureBox.Name = "pictureBox"
-        pictureBox.Size = New Drawing.Size(258, 372)
-        pictureBox.SizeMode = Wisej.Web.PictureBoxSizeMode.Zoom
-        pictureBox.TabIndex = 6
-        pictureBox.TabStop = False
-        AddHandler pictureBox.DragDrop, New Wisej.Web.DragEventHandler(AddressOf pictureBox_DragDrop)
-        AddHandler pictureBox.DragEnter, New Wisej.Web.DragEventHandler(AddressOf pictureBox_DragEnter)
-        ' 
-        ' label1
-        ' 
-        label1.AllowHtml = True
-        helpTip.SetHelpTip(label1, Nothing)
-        label1.Location = New Drawing.Point(22, 19)
-        label1.Name = "label1"
-        label1.Size = New Drawing.Size(202, 18)
-        label1.TabIndex = 1
-        label1.Text = "PictureBox <b>(Drop Target)</b>"
-        ' 
-        ' upload1
-        ' 
-        upload1.Anchor = Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left
-        helpTip.SetHelpTip(upload1, Nothing)
-        upload1.HideValue = True
-        upload1.Location = New Drawing.Point(22, 441)
-        upload1.Name = "upload1"
-        upload1.Size = New Drawing.Size(258, 43)
-        upload1.TabIndex = 2
-        upload1.AllowedFileTypes = "image/*"
-        upload1.Text = "Click to upload a new image"
-        AddHandler upload1.Uploaded, New Wisej.Web.UploadedEventHandler(AddressOf upload1_Uploaded)
-        ' 
-        ' label2
-        ' 
-        label2.AllowHtml = True
-        helpTip.SetHelpTip(label2, Nothing)
-        label2.Location = New Drawing.Point(295, 19)
-        label2.Name = "label2"
-        label2.Size = New Drawing.Size(322, 18)
-        label2.TabIndex = 3
-        label2.Text = "FlowLayoutPanel <b>(Multiple Files Drop Target)</b>"
-        ' 
-        ' flowLayoutPanel
-        ' 
-        flowLayoutPanel.AllowDrop = True
-        flowLayoutPanel.Anchor = Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left Or Wisej.Web.AnchorStyles.Right
-        flowLayoutPanel.AutoScroll = True
-        flowLayoutPanel.BorderStyle = Wisej.Web.BorderStyle.Solid
-        helpTip.SetHelpTip(flowLayoutPanel, "Click on an image to download it.")
-        flowLayoutPanel.Location = New Drawing.Point(295, 53)
-        flowLayoutPanel.Name = "flowLayoutPanel"
-        flowLayoutPanel.Size = New Drawing.Size(438, 372)
-        flowLayoutPanel.TabIndex = 4
-        AddHandler flowLayoutPanel.DragDrop, New Wisej.Web.DragEventHandler(AddressOf flowLayoutPanel_DragDrop)
-        AddHandler flowLayoutPanel.DragEnter, New Wisej.Web.DragEventHandler(AddressOf flowLayoutPanel_DragEnter)
-        ' 
-        ' upload2
-        ' 
-        upload2.AllowMultipleFiles = True
-        upload2.Anchor = Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left Or Wisej.Web.AnchorStyles.Right
-        helpTip.SetHelpTip(upload2, Nothing)
-        upload2.HideValue = True
-        upload2.Location = New Drawing.Point(295, 441)
-        upload2.Name = "upload2"
-        upload2.Size = New Drawing.Size(309, 43)
-        upload2.TabIndex = 5
-        upload2.Text = "Click to upload multiple images"
-        AddHandler upload2.Uploaded, New Wisej.Web.UploadedEventHandler(AddressOf upload2_Uploaded)
-        ' 
-        ' buttonClear
-        ' 
-        buttonClear.Anchor = Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Right
-        helpTip.SetHelpTip(buttonClear, Nothing)
-        buttonClear.Location = New Drawing.Point(621, 441)
-        buttonClear.Name = "buttonClear"
-        buttonClear.Size = New Drawing.Size(112, 43)
-        buttonClear.TabIndex = 7
-        buttonClear.Text = "Clear"
-        AddHandler buttonClear.Click, New EventHandler(AddressOf buttonClear_Click)
-        ' 
-        ' Window1
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(6.0F, 17.0F)
-        AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        ClientSize = New Drawing.Size(755, 505)
-        ControlBox = False
-        Controls.Add(buttonClear)
-        Controls.Add(upload2)
-        Controls.Add(flowLayoutPanel)
-        Controls.Add(label2)
-        Controls.Add(upload1)
-        Controls.Add(label1)
-        Controls.Add(pictureBox)
-        helpTip.SetHelpTip(Me, Nothing)
-        Name = "Window1"
-        StartPosition = Wisej.Web.FormStartPosition.CenterScreen
-        Text = "Window1"
-        CType(pictureBox, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Me.components = New System.ComponentModel.Container()
+        Me.pictureBox = New Wisej.Web.PictureBox()
+        Me.label1 = New Wisej.Web.Label()
+        Me.upload1 = New Wisej.Web.Upload()
+        Me.label2 = New Wisej.Web.Label()
+        Me.flowLayoutPanel = New Wisej.Web.FlowLayoutPanel()
+        Me.upload2 = New Wisej.Web.Upload()
+        Me.buttonClear = New Wisej.Web.Button()
+        Me.helpTip = New Wisej.Web.HelpTip(Me.components)
+        CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'pictureBox
+        '
+        Me.pictureBox.AllowDrop = True
+        Me.pictureBox.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom) _
+            Or Wisej.Web.AnchorStyles.Left), Wisej.Web.AnchorStyles)
+        Me.pictureBox.BorderStyle = Wisej.Web.BorderStyle.Solid
+        Me.pictureBox.Location = New System.Drawing.Point(22, 53)
+        Me.pictureBox.Name = "pictureBox"
+        Me.pictureBox.Size = New System.Drawing.Size(258, 372)
+        Me.pictureBox.SizeMode = Wisej.Web.PictureBoxSizeMode.Zoom
+        '
+        'label1
+        '
+        Me.label1.AllowHtml = True
+        Me.label1.Location = New System.Drawing.Point(22, 19)
+        Me.label1.Name = "label1"
+        Me.label1.Size = New System.Drawing.Size(202, 18)
+        Me.label1.TabIndex = 1
+        Me.label1.Text = "PictureBox <b>(Drop Target)</b>"
+        '
+        'upload1
+        '
+        Me.upload1.AllowedFileTypes = "image/*"
+        Me.upload1.Anchor = CType((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left), Wisej.Web.AnchorStyles)
+        Me.upload1.HideValue = True
+        Me.upload1.Location = New System.Drawing.Point(22, 441)
+        Me.upload1.Name = "upload1"
+        Me.upload1.Size = New System.Drawing.Size(258, 43)
+        Me.upload1.TabIndex = 2
+        Me.upload1.Text = "Click to upload a new image"
+        '
+        'label2
+        '
+        Me.label2.AllowHtml = True
+        Me.label2.Location = New System.Drawing.Point(295, 19)
+        Me.label2.Name = "label2"
+        Me.label2.Size = New System.Drawing.Size(322, 18)
+        Me.label2.TabIndex = 3
+        Me.label2.Text = "FlowLayoutPanel <b>(Multiple Files Drop Target)</b>"
+        '
+        'flowLayoutPanel
+        '
+        Me.flowLayoutPanel.AllowDrop = True
+        Me.flowLayoutPanel.Anchor = CType((((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom) _
+            Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+        Me.flowLayoutPanel.AutoScroll = True
+        Me.flowLayoutPanel.BorderStyle = Wisej.Web.BorderStyle.Solid
+        Me.helpTip.SetHelpTip(Me.flowLayoutPanel, "Click on an image to download it.")
+        Me.flowLayoutPanel.Location = New System.Drawing.Point(295, 53)
+        Me.flowLayoutPanel.Name = "flowLayoutPanel"
+        Me.flowLayoutPanel.Size = New System.Drawing.Size(438, 372)
+        Me.flowLayoutPanel.TabIndex = 4
+        Me.flowLayoutPanel.TabStop = True
+        '
+        'upload2
+        '
+        Me.upload2.AllowMultipleFiles = True
+        Me.upload2.Anchor = CType(((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+        Me.upload2.HideValue = True
+        Me.upload2.Location = New System.Drawing.Point(295, 441)
+        Me.upload2.Name = "upload2"
+        Me.upload2.Size = New System.Drawing.Size(309, 43)
+        Me.upload2.TabIndex = 5
+        Me.upload2.Text = "Click to upload multiple images"
+        '
+        'buttonClear
+        '
+        Me.buttonClear.Anchor = CType((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+        Me.buttonClear.Location = New System.Drawing.Point(621, 441)
+        Me.buttonClear.Name = "buttonClear"
+        Me.buttonClear.Size = New System.Drawing.Size(112, 43)
+        Me.buttonClear.TabIndex = 7
+        Me.buttonClear.Text = "Clear"
+        '
+        'Window1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(755, 505)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.buttonClear)
+        Me.Controls.Add(Me.upload2)
+        Me.Controls.Add(Me.flowLayoutPanel)
+        Me.Controls.Add(Me.label2)
+        Me.Controls.Add(Me.upload1)
+        Me.Controls.Add(Me.label1)
+        Me.Controls.Add(Me.pictureBox)
+        Me.Name = "Window1"
+        Me.StartPosition = Wisej.Web.FormStartPosition.CenterScreen
+        Me.Text = "Window1"
+        CType(Me.pictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
-
-
-#End Region
 
     Friend WithEvents pictureBox As Wisej.Web.PictureBox
     Friend WithEvents label1 As Wisej.Web.Label

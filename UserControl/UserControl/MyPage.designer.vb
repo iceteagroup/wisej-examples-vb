@@ -30,71 +30,69 @@ Partial Class MyPage
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        label1 = New Wisej.Web.Label()
-        colorPanel = New Wisej.Web.Panel()
-        label2 = New Wisej.Web.Label()
-        colorSlider = New ColorSlider()
-        checkBoxShowValueBubble = New Wisej.Web.CheckBox()
-        SuspendLayout()
-        ' 
-        ' label1
-        ' 
-        label1.Location = New Drawing.Point(158, 61)
-        label1.Name = "label1"
-        label1.Size = New Drawing.Size(76, 18)
-        label1.TabIndex = 2
-        label1.Text = "Color Panel"
-        ' 
-        ' colorPanel
-        ' 
-        colorPanel.BorderStyle = Wisej.Web.BorderStyle.Solid
-        colorPanel.Location = New Drawing.Point(49, 112)
-        colorPanel.Name = "colorPanel"
-        colorPanel.Size = New Drawing.Size(295, 228)
-        colorPanel.TabIndex = 1
-        colorPanel.TabStop = True
-        ' 
-        ' label2
-        ' 
-        label2.Location = New Drawing.Point(492, 61)
-        label2.Name = "label2"
-        label2.Size = New Drawing.Size(76, 18)
-        label2.TabIndex = 3
-        label2.Text = "Color Slider"
-        ' 
-        ' colorSlider
-        ' 
-        colorSlider.Location = New Drawing.Point(383, 112)
-        colorSlider.Name = "colorSlider"
-        colorSlider.Size = New Drawing.Size(295, 228)
-        colorSlider.TabIndex = 4
-        AddHandler colorSlider.ValueChanged, New EventHandler(AddressOf colorSlider_ValueChanged)
-        ' 
-        ' checkBoxShowValueBubble
-        ' 
-        checkBoxShowValueBubble.Checked = True
-        checkBoxShowValueBubble.CheckState = Wisej.Web.CheckState.Checked
-        checkBoxShowValueBubble.Location = New Drawing.Point(459, 365)
-        checkBoxShowValueBubble.Name = "checkBoxShowValueBubble"
-        checkBoxShowValueBubble.Size = New Drawing.Size(145, 22)
-        checkBoxShowValueBubble.TabIndex = 5
-        checkBoxShowValueBubble.Text = "Show Value Bubble"
-        AddHandler checkBoxShowValueBubble.CheckedChanged, New EventHandler(AddressOf checkBoxShowValueBubble_CheckedChanged)
-        ' 
-        ' MyPage
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(7.0F, 16.0F)
-        AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        Controls.Add(checkBoxShowValueBubble)
-        Controls.Add(colorSlider)
-        Controls.Add(label2)
-        Controls.Add(colorPanel)
-        Controls.Add(label1)
-        Name = "MyPage"
-        Size = New Drawing.Size(629, 585)
-        AddHandler Load, New EventHandler(AddressOf MyPage_Load)
-        ResumeLayout(False)
-        PerformLayout()
+        Me.label1 = New Wisej.Web.Label()
+        Me.colorPanel = New Wisej.Web.Panel()
+        Me.label2 = New Wisej.Web.Label()
+        Me.colorSlider = New UserControl.ColorSlider()
+        Me.checkBoxShowValueBubble = New Wisej.Web.CheckBox()
+        Me.SuspendLayout()
+        '
+        'label1
+        '
+        Me.label1.Location = New System.Drawing.Point(158, 61)
+        Me.label1.Name = "label1"
+        Me.label1.Size = New System.Drawing.Size(76, 18)
+        Me.label1.TabIndex = 2
+        Me.label1.Text = "Color Panel"
+        '
+        'colorPanel
+        '
+        Me.colorPanel.BorderStyle = Wisej.Web.BorderStyle.Solid
+        Me.colorPanel.Location = New System.Drawing.Point(49, 112)
+        Me.colorPanel.Name = "colorPanel"
+        Me.colorPanel.Size = New System.Drawing.Size(295, 228)
+        Me.colorPanel.TabIndex = 1
+        Me.colorPanel.TabStop = True
+        '
+        'label2
+        '
+        Me.label2.Location = New System.Drawing.Point(492, 61)
+        Me.label2.Name = "label2"
+        Me.label2.Size = New System.Drawing.Size(76, 18)
+        Me.label2.TabIndex = 3
+        Me.label2.Text = "Color Slider"
+        '
+        'colorSlider
+        '
+        Me.colorSlider.Location = New System.Drawing.Point(383, 112)
+        Me.colorSlider.Name = "colorSlider"
+        Me.colorSlider.Size = New System.Drawing.Size(295, 228)
+        Me.colorSlider.TabIndex = 4
+        '
+        'checkBoxShowValueBubble
+        '
+        Me.checkBoxShowValueBubble.Checked = True
+        Me.checkBoxShowValueBubble.CheckState = Wisej.Web.CheckState.Checked
+        Me.checkBoxShowValueBubble.Location = New System.Drawing.Point(459, 365)
+        Me.checkBoxShowValueBubble.Name = "checkBoxShowValueBubble"
+        Me.checkBoxShowValueBubble.Size = New System.Drawing.Size(146, 22)
+        Me.checkBoxShowValueBubble.TabIndex = 5
+        Me.checkBoxShowValueBubble.Text = "Show Value Bubble"
+        '
+        'MyPage
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.Controls.Add(Me.checkBoxShowValueBubble)
+        Me.Controls.Add(Me.colorSlider)
+        Me.Controls.Add(Me.label2)
+        Me.Controls.Add(Me.colorPanel)
+        Me.Controls.Add(Me.label1)
+        Me.Name = "MyPage"
+        Me.Size = New System.Drawing.Size(865, 838)
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
 

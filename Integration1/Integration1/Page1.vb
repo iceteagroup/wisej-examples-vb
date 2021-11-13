@@ -98,14 +98,14 @@ Partial Public Class Page1
     Public WidgetCircularGage_StartValue As Integer = 0
     Public WidgetCircularGage_EndValue As Integer = 0
 
-    Private Sub widgetCircularGage_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs)
+    Private Sub widgetCircularGage_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs) Handles widgetCircularGage.WidgetEvent
         If Equals(e.Type, "Initialized") Then
             ' determine min / max values
             widgetCircularGage.Eval("App.MainPage.SetStartValue(this.gauge._options.scale.startValue)")
             widgetCircularGage.Eval("App.MainPage.SetEndValue(this.gauge._options.scale.endValue)")
         ElseIf Equals(e.Type, "OptionChanged") Then
 
-            If e.Data.optionName Is "value" Then
+            If e.Data.optionName.Equals("value") Then
                 Dim value As Integer = e.Data.optionValue
 
                 If value > WidgetCircularGage_EndValue Then

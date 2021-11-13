@@ -31,117 +31,119 @@ Namespace Views
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            components = New ComponentModel.Container()
-            label1 = New Label()
-            animation = New Animation(components)
-            textBoxUserName = New TextBox()
-            textBoxPassword = New TextBox()
-            buttonLogin = New Button()
-            helpTip = New HelpTip(components)
-            errorProvider = New ErrorProvider(components)
-            panel = New Panel()
-            CType(errorProvider, ComponentModel.ISupportInitialize).BeginInit()
-            panel.SuspendLayout()
-            SuspendLayout()
-            ' 
-            ' label1
-            ' 
-            label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-            animation.GetAnimation(label1).Event = "appear"
-            animation.GetAnimation(label1).Name = "bounce"
-            label1.Font = New Drawing.Font("default", 24.0F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-            label1.ImageAlign = Drawing.ContentAlignment.TopCenter
-            label1.ImageSource = "Images/Wisej-Logo-64x64.png"
-            label1.Location = New Drawing.Point(47, 9)
-            label1.Margin = New Padding(9)
-            label1.Name = "label1"
-            label1.Size = New Drawing.Size(887, 450)
-            label1.TabIndex = 0
-            label1.Text = "ACME Hardware"
-            label1.TextAlign = Drawing.ContentAlignment.MiddleCenter
-            ' 
-            ' textBoxUserName
-            ' 
-            textBoxUserName.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-            textBoxUserName.AutoComplete = AutoComplete.Off
-            textBoxUserName.AutoSize = False
-            helpTip.SetHelpTip(textBoxUserName, "User your name or email address.")
-            errorProvider.SetIconAlignment(textBoxUserName, ErrorIconAlignment.MiddleLeft)
-            textBoxUserName.Location = New Drawing.Point(82, 477)
-            textBoxUserName.Margin = New Padding(9)
-            textBoxUserName.Name = "textBoxUserName"
-            textBoxUserName.Size = New Drawing.Size(817, 108)
-            textBoxUserName.TabIndex = 1
-            textBoxUserName.Watermark = "User Name"
-            ' 
-            ' textBoxPassword
-            ' 
-            textBoxPassword.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-            textBoxPassword.AutoComplete = AutoComplete.Off
-            textBoxPassword.AutoSize = False
-            helpTip.SetHelpTip(textBoxPassword, "Enter ""demo""")
-            errorProvider.SetIconAlignment(textBoxPassword, ErrorIconAlignment.MiddleLeft)
-            textBoxPassword.Location = New Drawing.Point(82, 650)
-            textBoxPassword.Margin = New Padding(9)
-            textBoxPassword.Name = "textBoxPassword"
-            textBoxPassword.PasswordChar = "*"c
-            textBoxPassword.Size = New Drawing.Size(817, 108)
-            textBoxPassword.TabIndex = 2
-            textBoxPassword.Watermark = "Password"
-            ' 
-            ' buttonLogin
-            ' 
-            buttonLogin.Anchor = AnchorStyles.Bottom
-            buttonLogin.ImageSource = "resource.wx/Wisej.Ext.MaterialDesign/locked-padlock.svg"
-            buttonLogin.Location = New Drawing.Point(299, 857)
-            buttonLogin.Margin = New Padding(9)
-            buttonLogin.Name = "buttonLogin"
-            buttonLogin.Size = New Drawing.Size(408, 140)
-            buttonLogin.TabIndex = 3
-            buttonLogin.Text = "&LOGIN"
-            AddHandler buttonLogin.Click, New EventHandler(AddressOf buttonLogin_Click)
-            ' 
-            ' errorProvider
-            ' 
-            errorProvider.BlinkAnimation = ErrorAnimationType.Bounce
-            errorProvider.ContainerControl = Me
-            errorProvider.IconSource = "resource.wx/Wisej.Ext.MaterialDesign/round-error-symbol.svg"
-            ' 
-            ' panel
-            ' 
-            panel.Anchor = AnchorStyles.None
-            panel.BackColor = Drawing.Color.Transparent
-            panel.Controls.Add(buttonLogin)
-            panel.Controls.Add(textBoxPassword)
-            panel.Controls.Add(textBoxUserName)
-            panel.Controls.Add(label1)
-            panel.Location = New Drawing.Point(340, 378)
-            panel.Margin = New Padding(9)
-            panel.MaximumSize = New Drawing.Size(980, 1035)
-            panel.MinimumSize = New Drawing.Size(747, 720)
-            panel.Name = "panel"
-            panel.Size = New Drawing.Size(980, 1035)
-            panel.TabIndex = 4
-            ' 
-            ' LoginPage
-            ' 
-            Accelerators = New Keys() {Keys.Return}
-            AutoScaleDimensions = New Drawing.SizeF(21.0F, 45.0F)
-            AutoScaleMode = AutoScaleMode.Font
-            BackgroundImageLayout = ImageLayout.BestFit
-            BackgroundImageSource = "Images/Background.jpg"
-            Controls.Add(panel)
-            Font = New Drawing.Font("default", 12.0F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-            Margin = New Padding(4)
-            Name = "LoginPage"
-            Size = New Drawing.Size(1398, 1213)
-            Text = "ACME Hardware - Login"
-            AddHandler Load, New EventHandler(AddressOf LoginPage_Load)
-            AddHandler ResponsiveProfileChanged, New ResponsiveProfileChangedEventHandler(AddressOf LoginPage_ResponsiveProfileChanged)
-            AddHandler Accelerator, New AcceleratorEventHandler(AddressOf LoginPage_Accelerator)
-            CType(errorProvider, ComponentModel.ISupportInitialize).EndInit()
-            panel.ResumeLayout(False)
-            ResumeLayout(False)
+            Me.components = New System.ComponentModel.Container()
+            Me.label1 = New Wisej.Web.Label()
+            Me.animation = New Wisej.Web.Animation(Me.components)
+            Me.textBoxUserName = New Wisej.Web.TextBox()
+            Me.textBoxPassword = New Wisej.Web.TextBox()
+            Me.buttonLogin = New Wisej.Web.Button()
+            Me.helpTip = New Wisej.Web.HelpTip(Me.components)
+            Me.errorProvider = New Wisej.Web.ErrorProvider(Me.components)
+            Me.panel = New Wisej.Web.Panel()
+            CType(Me.errorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+            Me.panel.SuspendLayout()
+            Me.SuspendLayout()
+            '
+            'label1
+            '
+            Me.label1.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Me.animation.GetAnimation(Me.label1).Event = "appear"
+            Me.animation.GetAnimation(Me.label1).Name = "bounce"
+            Me.label1.Font = New System.Drawing.Font("default", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+            Me.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+            Me.label1.ImageSource = "Images/Wisej-Logo-64x64.png"
+            Me.label1.Location = New System.Drawing.Point(20, 4)
+            Me.label1.Margin = New Wisej.Web.Padding(2)
+            Me.label1.Name = "label1"
+            Me.label1.Size = New System.Drawing.Size(380, 200)
+            Me.label1.TabIndex = 0
+            Me.label1.Text = "ACME Hardware"
+            Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            '
+            'textBoxUserName
+            '
+            Me.textBoxUserName.Anchor = CType(((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Me.textBoxUserName.AutoComplete = Wisej.Web.AutoComplete.Off
+            Me.textBoxUserName.AutoSize = False
+            Me.helpTip.SetHelpTip(Me.textBoxUserName, "User your name or email address.")
+            Me.errorProvider.SetIconAlignment(Me.textBoxUserName, Wisej.Web.ErrorIconAlignment.MiddleLeft)
+            Me.textBoxUserName.Location = New System.Drawing.Point(35, 212)
+            Me.textBoxUserName.Margin = New Wisej.Web.Padding(2)
+            Me.textBoxUserName.Name = "textBoxUserName"
+            Me.textBoxUserName.Size = New System.Drawing.Size(350, 48)
+            Me.textBoxUserName.TabIndex = 1
+            Me.textBoxUserName.Watermark = "User Name"
+            '
+            'textBoxPassword
+            '
+            Me.textBoxPassword.Anchor = CType(((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Me.textBoxPassword.AutoComplete = Wisej.Web.AutoComplete.Off
+            Me.textBoxPassword.AutoSize = False
+            Me.helpTip.SetHelpTip(Me.textBoxPassword, "Enter ""demo""")
+            Me.errorProvider.SetIconAlignment(Me.textBoxPassword, Wisej.Web.ErrorIconAlignment.MiddleLeft)
+            Me.textBoxPassword.InputType.Type = Wisej.Web.TextBoxType.Password
+            Me.textBoxPassword.Location = New System.Drawing.Point(35, 289)
+            Me.textBoxPassword.Margin = New Wisej.Web.Padding(2)
+            Me.textBoxPassword.Name = "textBoxPassword"
+            Me.textBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+            Me.textBoxPassword.Size = New System.Drawing.Size(350, 41)
+            Me.textBoxPassword.TabIndex = 2
+            Me.textBoxPassword.Watermark = "Password"
+            '
+            'buttonLogin
+            '
+            Me.buttonLogin.Anchor = Wisej.Web.AnchorStyles.Bottom
+            Me.buttonLogin.ImageSource = "resource.wx/Wisej.Ext.MaterialDesign/locked-padlock.svg"
+            Me.buttonLogin.Location = New System.Drawing.Point(128, 381)
+            Me.buttonLogin.Margin = New Wisej.Web.Padding(2)
+            Me.buttonLogin.Name = "buttonLogin"
+            Me.buttonLogin.Size = New System.Drawing.Size(110, 28)
+            Me.buttonLogin.TabIndex = 3
+            Me.buttonLogin.Text = "&LOGIN"
+            '
+            'errorProvider
+            '
+            Me.errorProvider.BlinkAnimation = Wisej.Web.ErrorAnimationType.Bounce
+            Me.errorProvider.ContainerControl = Me
+            Me.errorProvider.IconSource = "resource.wx/Wisej.Ext.MaterialDesign/round-error-symbol.svg"
+            '
+            'panel
+            '
+            Me.panel.Anchor = Wisej.Web.AnchorStyles.None
+            Me.panel.BackColor = System.Drawing.Color.Transparent
+            Me.panel.Controls.Add(Me.buttonLogin)
+            Me.panel.Controls.Add(Me.textBoxPassword)
+            Me.panel.Controls.Add(Me.textBoxUserName)
+            Me.panel.Controls.Add(Me.label1)
+            Me.panel.Location = New System.Drawing.Point(266, 140)
+            Me.panel.Margin = New Wisej.Web.Padding(4)
+            Me.panel.MaximumSize = New System.Drawing.Size(420, 460)
+            Me.panel.MinimumSize = New System.Drawing.Size(320, 320)
+            Me.panel.Name = "panel"
+            Me.panel.Size = New System.Drawing.Size(420, 460)
+            Me.panel.TabIndex = 4
+            Me.panel.TabStop = True
+            '
+            'LoginPage
+            '
+            Me.Accelerators = New Wisej.Web.Keys() {Wisej.Web.Keys.Enter}
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+            Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+            Me.BackgroundImageLayout = Wisej.Web.ImageLayout.BestFit
+            Me.BackgroundImageSource = "Images/Background.jpg"
+            Me.Controls.Add(Me.panel)
+            Me.Font = New System.Drawing.Font("default", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+            Me.Margin = New Wisej.Web.Padding(4)
+            Me.Name = "LoginPage"
+            Me.Size = New System.Drawing.Size(1033, 741)
+            Me.Text = "ACME Hardware - Login"
+            CType(Me.errorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+            Me.panel.ResumeLayout(False)
+            Me.ResumeLayout(False)
+
         End Sub
 
 

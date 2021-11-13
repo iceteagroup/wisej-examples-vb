@@ -2,6 +2,7 @@
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MandelbrotPanel
+    Inherits Wisej.Web.UserControl
     ''' <summary> 
     ''' Required designer variable.
     ''' </summary>
@@ -30,16 +31,16 @@ Partial Class MandelbrotPanel
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        SuspendLayout()
-        ' 
-        ' MandelbrotPanel
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(6.0F, 17.0F)
-        AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        Name = "MandelbrotPanel"
-        Size = New Drawing.Size(355, 288)
-        AddHandler Paint, New Wisej.Web.PaintEventHandler(AddressOf MandelbrotPanel_Paint)
-        ResumeLayout(False)
+        Me.SuspendLayout()
+        '
+        'MandelbrotPanel
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.Name = "MandelbrotPanel"
+        Me.Size = New System.Drawing.Size(355, 288)
+        Me.ResumeLayout(False)
+
     End Sub
 
 #End Region

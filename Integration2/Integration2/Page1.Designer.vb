@@ -115,18 +115,14 @@ Partial Class Page1
         Me.widgetTagCloud.InitScript = resources.GetString("widgetTagCloud.InitScript")
         Me.widgetTagCloud.Location = New System.Drawing.Point(684, 11)
         Me.widgetTagCloud.Name = "widgetTagCloud"
-        Me.widgetTagCloud.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package1.Integrity = Nothing
-        Package1.Name = "ej.web.all.min.css"
-        Package1.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/flat-azure/ej.web.all.min.css"
-        Package2.Integrity = Nothing
-        Package2.Name = "jquery-1.10.2.min.js"
-        Package2.Source = "http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"
-        Package3.Integrity = Nothing
-        Package3.Name = "jquery.easing.1.3.min.js"
-        Package3.Source = "http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"
-        Package4.Integrity = Nothing
-        Package4.Name = "ej.web.all.min.js"
+		Me.widgetTagCloud.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
+		Package1.Name = "ej.web.all.min.css"
+		Package1.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/flat-azure/ej.web.all.min.css"
+		Package2.Name = "jquery-1.10.2.min.js"
+		Package2.Source = "http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"
+		Package3.Name = "jquery.easing.1.3.min.js"
+		Package3.Source = "http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"
+		Package4.Name = "ej.web.all.min.js"
         Package4.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/ej.web.all.min.js"
         Me.widgetTagCloud.Packages.Add(Package1)
         Me.widgetTagCloud.Packages.Add(Package2)
@@ -160,18 +156,14 @@ Partial Class Page1
         Me.widgetSignature.InitScript = resources.GetString("widgetSignature.InitScript")
         Me.widgetSignature.Location = New System.Drawing.Point(15, 37)
         Me.widgetSignature.Name = "widgetSignature"
-        Me.widgetSignature.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package5.Integrity = Nothing
-        Package5.Name = "ej.web.all.min.css"
-        Package5.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/flat-azure/ej.web.all.min.css"
-        Package6.Integrity = Nothing
-        Package6.Name = "jquery-1.10.2.min.js"
-        Package6.Source = "http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"
-        Package7.Integrity = Nothing
-        Package7.Name = "jquery.easing.1.3.min.js"
-        Package7.Source = "http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"
-        Package8.Integrity = Nothing
-        Package8.Name = "ej.web.all.min.js"
+		Me.widgetSignature.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
+		Package5.Name = "ej.web.all.min.css"
+		Package5.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/flat-azure/ej.web.all.min.css"
+		Package6.Name = "jquery-1.10.2.min.js"
+		Package6.Source = "http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"
+		Package7.Name = "jquery.easing.1.3.min.js"
+		Package7.Source = "http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js"
+		Package8.Name = "ej.web.all.min.js"
         Package8.Source = "http://cdn.syncfusion.com/15.1.0.41/js/web/ej.web.all.min.js"
         Me.widgetSignature.Packages.Add(Package5)
         Me.widgetSignature.Packages.Add(Package6)

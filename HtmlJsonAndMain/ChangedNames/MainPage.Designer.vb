@@ -32,54 +32,54 @@ Namespace ChangedNames
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(MainPage))
-            textBox1 = New Wisej.Web.TextBox()
-            title = New Wisej.Web.Label()
-            url = New Wisej.Web.Label()
-            SuspendLayout()
-            ' 
-            ' textBox1
-            ' 
-            textBox1.Location = New Drawing.Point(30, 60)
-            textBox1.Multiline = True
-            textBox1.Name = "textBox1"
-            textBox1.ReadOnly = True
-            textBox1.Size = New Drawing.Size(870, 564)
-            textBox1.TabIndex = 0
-            textBox1.Text = resources.GetString("textBox1.Text")
-            ' 
-            ' title
-            ' 
-            title.AutoSize = True
-            title.Font = New Drawing.Font("default", 24.0F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Pixel)
-            title.Location = New Drawing.Point(30, 20)
-            title.Name = "title"
-            title.Size = New Drawing.Size(190, 30)
-            title.TabIndex = 1
-            title.Text = "ChangedNames"
-            ' 
-            ' url
-            ' 
-            url.Location = New Drawing.Point(539, 30)
-            url.Name = "url"
-            url.Size = New Drawing.Size(361, 16)
-            url.TabIndex = 2
-            url.Text = "url"
-            url.TextAlign = Drawing.ContentAlignment.TopRight
-            ' 
-            ' MainPage
-            ' 
-            AutoScaleDimensions = New Drawing.SizeF(7.0F, 16.0F)
-            AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-            Controls.Add(url)
-            Controls.Add(title)
-            Controls.Add(textBox1)
-            Name = "MainPage"
-            Size = New Drawing.Size(941, 804)
-            Text = "Main Page"
-            AddHandler Load, New EventHandler(AddressOf MainPage_Load)
-            ResumeLayout(False)
-            PerformLayout()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
+            Me.textBox1 = New Wisej.Web.TextBox()
+            Me.title = New Wisej.Web.Label()
+            Me.url = New Wisej.Web.Label()
+            Me.SuspendLayout()
+            '
+            'textBox1
+            '
+            Me.textBox1.Location = New System.Drawing.Point(30, 60)
+            Me.textBox1.Multiline = True
+            Me.textBox1.Name = "textBox1"
+            Me.textBox1.ReadOnly = True
+            Me.textBox1.Size = New System.Drawing.Size(870, 564)
+            Me.textBox1.TabIndex = 0
+            Me.textBox1.Text = resources.GetString("textBox1.Text")
+            '
+            'title
+            '
+            Me.title.AutoSize = True
+            Me.title.Font = New System.Drawing.Font("default", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+            Me.title.Location = New System.Drawing.Point(30, 20)
+            Me.title.Name = "title"
+            Me.title.Size = New System.Drawing.Size(178, 28)
+            Me.title.TabIndex = 1
+            Me.title.Text = "ChangedNames"
+            '
+            'url
+            '
+            Me.url.Location = New System.Drawing.Point(539, 30)
+            Me.url.Name = "url"
+            Me.url.Size = New System.Drawing.Size(361, 16)
+            Me.url.TabIndex = 2
+            Me.url.Text = "url"
+            Me.url.TextAlign = System.Drawing.ContentAlignment.TopRight
+            '
+            'MainPage
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+            Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+            Me.Controls.Add(Me.url)
+            Me.Controls.Add(Me.title)
+            Me.Controls.Add(Me.textBox1)
+            Me.Name = "MainPage"
+            Me.Size = New System.Drawing.Size(1217, 577)
+            Me.Text = "Main Page"
+            Me.ResumeLayout(False)
+            Me.PerformLayout()
+
         End Sub
 
 #End Region

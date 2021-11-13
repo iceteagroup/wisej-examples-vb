@@ -5,7 +5,7 @@ Imports Wisej.Web
 Partial Public Class EventEditor
 
 
-    Public eventEntry As Ext.FullCalendar.Event
+    Public eventEntry As Web.Ext.FullCalendar.Event
 
     Public Sub New()
         InitializeComponent()

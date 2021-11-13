@@ -62,11 +62,11 @@ Partial Class Page1
         Me.panel1.HeaderForeColor = System.Drawing.Color.FromName("@activeCaptionText")
         Me.panel1.HeaderSize = 40
         Me.panel1.LayoutStyle = Wisej.Web.FlexLayoutStyle.Vertical
-        Me.panel1.Location = New System.Drawing.Point(209, 191)
+        Me.panel1.Location = New System.Drawing.Point(482, 208)
         Me.panel1.Name = "panel1"
         Me.panel1.ShowCloseButton = False
         Me.panel1.ShowHeader = True
-        Me.panel1.Size = New System.Drawing.Size(546, 251)
+        Me.panel1.Size = New System.Drawing.Size(542, 199)
         Me.panel1.TabIndex = 0
         Me.panel1.TabStop = True
         Me.panel1.Text = "Select States"
@@ -83,7 +83,7 @@ Partial Class Page1
         Me.flexLayoutPanel1.Margin = New Wisej.Web.Padding(10, 10, 10, 5)
         Me.flexLayoutPanel1.Name = "flexLayoutPanel1"
         Me.flexLayoutPanel1.ShowCloseButton = False
-        Me.flexLayoutPanel1.Size = New System.Drawing.Size(526, 56)
+        Me.flexLayoutPanel1.Size = New System.Drawing.Size(522, 19)
         Me.flexLayoutPanel1.TabIndex = 1
         Me.flexLayoutPanel1.TabStop = True
         '
@@ -91,7 +91,7 @@ Partial Class Page1
         '
         Me.label1.Location = New System.Drawing.Point(3, 3)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(135, 50)
+        Me.label1.Size = New System.Drawing.Size(135, 13)
         Me.label1.TabIndex = 0
         Me.label1.Text = "Selected States:"
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -104,7 +104,7 @@ Partial Class Page1
         Me.label2.MaximumSize = New System.Drawing.Size(365, 0)
         Me.label2.MinimumSize = New System.Drawing.Size(365, 0)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(365, 50)
+        Me.label2.Size = New System.Drawing.Size(365, 13)
         Me.label2.TabIndex = 1
         Me.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -116,11 +116,11 @@ Partial Class Page1
         Me.flexLayoutPanel2.Controls.Add(Me.tagTextBox1)
         Me.flexLayoutPanel2.HeaderSize = 40
         Me.flexLayoutPanel2.LayoutStyle = Wisej.Web.FlexLayoutStyle.Horizontal
-        Me.flexLayoutPanel2.Location = New System.Drawing.Point(10, 86)
+        Me.flexLayoutPanel2.Location = New System.Drawing.Point(10, 49)
         Me.flexLayoutPanel2.Margin = New Wisej.Web.Padding(10, 5, 10, 10)
         Me.flexLayoutPanel2.Name = "flexLayoutPanel2"
         Me.flexLayoutPanel2.ShowCloseButton = False
-        Me.flexLayoutPanel2.Size = New System.Drawing.Size(526, 58)
+        Me.flexLayoutPanel2.Size = New System.Drawing.Size(522, 43)
         Me.flexLayoutPanel2.TabIndex = 2
         Me.flexLayoutPanel2.TabStop = True
         '
@@ -129,7 +129,7 @@ Partial Class Page1
         Me.label3.Location = New System.Drawing.Point(3, 15)
         Me.label3.Margin = New Wisej.Web.Padding(3, 15, 3, 15)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(135, 28)
+        Me.label3.Size = New System.Drawing.Size(135, 13)
         Me.label3.TabIndex = 0
         Me.label3.Text = "Select a State:"
         Me.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -142,7 +142,7 @@ Partial Class Page1
         Me.tagTextBox1.Margin = New Wisej.Web.Padding(3, 15, 3, 15)
         Me.tagTextBox1.MaxTagWidth = 200
         Me.tagTextBox1.Name = "tagTextBox1"
-        Me.tagTextBox1.Size = New System.Drawing.Size(365, 28)
+        Me.tagTextBox1.Size = New System.Drawing.Size(365, 13)
         Me.tagTextBox1.TabIndex = 1
         '
         'flexLayoutPanel3
@@ -155,12 +155,12 @@ Partial Class Page1
         Me.flexLayoutPanel3.HeaderSize = 40
         Me.flexLayoutPanel3.HorizontalAlign = Wisej.Web.HorizontalAlignment.Right
         Me.flexLayoutPanel3.LayoutStyle = Wisej.Web.FlexLayoutStyle.Horizontal
-        Me.flexLayoutPanel3.Location = New System.Drawing.Point(0, 164)
+        Me.flexLayoutPanel3.Location = New System.Drawing.Point(0, 112)
         Me.flexLayoutPanel3.Margin = New Wisej.Web.Padding(0)
         Me.flexLayoutPanel3.Name = "flexLayoutPanel3"
         Me.flexLayoutPanel3.Padding = New Wisej.Web.Padding(5)
         Me.flexLayoutPanel3.ShowCloseButton = False
-        Me.flexLayoutPanel3.Size = New System.Drawing.Size(546, 47)
+        Me.flexLayoutPanel3.Size = New System.Drawing.Size(542, 47)
         Me.flexLayoutPanel3.TabIndex = 3
         Me.flexLayoutPanel3.TabStop = True
         '
@@ -182,11 +182,11 @@ Partial Class Page1
         Me.flexLayoutPanel3.SetFillWeight(Me.separator1, 1)
         Me.separator1.Location = New System.Drawing.Point(164, 8)
         Me.separator1.Name = "separator1"
-        Me.separator1.Size = New System.Drawing.Size(179, 31)
+        Me.separator1.Size = New System.Drawing.Size(175, 31)
         '
         'button1
         '
-        Me.button1.Location = New System.Drawing.Point(359, 8)
+        Me.button1.Location = New System.Drawing.Point(355, 8)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(74, 31)
         Me.button1.TabIndex = 0
@@ -194,7 +194,7 @@ Partial Class Page1
         '
         'button2
         '
-        Me.button2.Location = New System.Drawing.Point(449, 8)
+        Me.button2.Location = New System.Drawing.Point(445, 8)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(87, 31)
         Me.button2.TabIndex = 1
@@ -202,11 +202,11 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.panel1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(964, 635)
+        Me.Size = New System.Drawing.Size(1511, 669)
         Me.Text = "Page1"
         Me.panel1.ResumeLayout(False)
         Me.panel1.PerformLayout()

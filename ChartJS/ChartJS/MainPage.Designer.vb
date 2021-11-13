@@ -31,14 +31,7 @@ Partial Class MainPage
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Dim LineOptions1 As Wisej.Web.Ext.ChartJS.LineOptions = New Wisej.Web.Ext.ChartJS.LineOptions()
-        Dim BarOptions1 As Wisej.Web.Ext.ChartJS.BarOptions = New Wisej.Web.Ext.ChartJS.BarOptions()
-        Dim RadarOptions1 As Wisej.Web.Ext.ChartJS.RadarOptions = New Wisej.Web.Ext.ChartJS.RadarOptions()
-        Dim PolarAreaOptions1 As Wisej.Web.Ext.ChartJS.PolarAreaOptions = New Wisej.Web.Ext.ChartJS.PolarAreaOptions()
-        Dim DoughnutOptions1 As Wisej.Web.Ext.ChartJS.DoughnutOptions = New Wisej.Web.Ext.ChartJS.DoughnutOptions()
-        Dim PieOptions1 As Wisej.Web.Ext.ChartJS.PieOptions = New Wisej.Web.Ext.ChartJS.PieOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
-
         Me.flowLayoutPanel1 = New Wisej.Web.FlowLayoutPanel()
         Me.chartJS1 = New Wisej.Web.Ext.ChartJS.ChartJS()
         Me.chartJS2 = New Wisej.Web.Ext.ChartJS.ChartJS()
@@ -60,7 +53,7 @@ Partial Class MainPage
         'flowLayoutPanel1
         '
         Me.flowLayoutPanel1.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
-        Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.flowLayoutPanel1.AutoSize = True
         Me.flowLayoutPanel1.Controls.Add(Me.chartJS1)
         Me.flowLayoutPanel1.Controls.Add(Me.chartJS2)
@@ -70,7 +63,7 @@ Partial Class MainPage
         Me.flowLayoutPanel1.Controls.Add(Me.chartJS3)
         Me.flowLayoutPanel1.Location = New System.Drawing.Point(67, 241)
         Me.flowLayoutPanel1.Name = "flowLayoutPanel1"
-        Me.flowLayoutPanel1.Size = New System.Drawing.Size(802, 960)
+        Me.flowLayoutPanel1.Size = New System.Drawing.Size(1228, 960)
         Me.flowLayoutPanel1.TabIndex = 15
         Me.flowLayoutPanel1.TabStop = True
         '
@@ -83,9 +76,8 @@ Partial Class MainPage
         Me.chartJS1.Margin = New Wisej.Web.Padding(10)
         Me.chartJS1.MinimumSize = New System.Drawing.Size(300, 300)
         Me.chartJS1.Name = "chartJS1"
-        LineOptions1.Legend.Display = False
-        Me.chartJS1.Options = LineOptions1
-        Me.chartJS1.Size = New System.Drawing.Size(381, 300)
+        Me.chartJS1.Options.Legend.Display = False
+        Me.chartJS1.Size = New System.Drawing.Size(594, 300)
         Me.chartJS1.TabIndex = 3
         Me.chartJS1.Text = "Line Chart"
         '
@@ -96,13 +88,12 @@ Partial Class MainPage
         Me.flowLayoutPanel1.SetFillWeight(Me.chartJS2, 100)
         Me.flowLayoutPanel1.SetFlowBreak(Me.chartJS2, True)
         Me.chartJS2.Labels = New String() {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
-        Me.chartJS2.Location = New System.Drawing.Point(411, 10)
+        Me.chartJS2.Location = New System.Drawing.Point(624, 10)
         Me.chartJS2.Margin = New Wisej.Web.Padding(10)
         Me.chartJS2.MinimumSize = New System.Drawing.Size(300, 300)
         Me.chartJS2.Name = "chartJS2"
-        BarOptions1.Title.Text = "Bar Chart"
-        Me.chartJS2.Options = BarOptions1
-        Me.chartJS2.Size = New System.Drawing.Size(381, 300)
+        Me.chartJS2.Options.Title.Text = "Bar Chart"
+        Me.chartJS2.Size = New System.Drawing.Size(594, 300)
         Me.chartJS2.TabIndex = 4
         Me.chartJS2.Text = "Bar Chart"
         '
@@ -116,8 +107,7 @@ Partial Class MainPage
         Me.chartJS4.Margin = New Wisej.Web.Padding(10)
         Me.chartJS4.MinimumSize = New System.Drawing.Size(200, 200)
         Me.chartJS4.Name = "chartJS4"
-        Me.chartJS4.Options = RadarOptions1
-        Me.chartJS4.Size = New System.Drawing.Size(248, 300)
+        Me.chartJS4.Size = New System.Drawing.Size(287, 300)
         Me.chartJS4.TabIndex = 6
         Me.chartJS4.Text = "Radar Chart"
         '
@@ -127,13 +117,12 @@ Partial Class MainPage
         Me.chartJS6.ChartType = Wisej.Web.Ext.ChartJS.ChartType.PolarArea
         Me.flowLayoutPanel1.SetFillWeight(Me.chartJS6, 100)
         Me.chartJS6.Labels = New String() {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
-        Me.chartJS6.Location = New System.Drawing.Point(278, 330)
+        Me.chartJS6.Location = New System.Drawing.Point(317, 330)
         Me.chartJS6.Margin = New Wisej.Web.Padding(10)
         Me.chartJS6.MinimumSize = New System.Drawing.Size(200, 200)
         Me.chartJS6.Name = "chartJS6"
-        PolarAreaOptions1.Legend.Display = False
-        Me.chartJS6.Options = PolarAreaOptions1
-        Me.chartJS6.Size = New System.Drawing.Size(247, 300)
+        Me.chartJS6.Options.Legend.Display = False
+        Me.chartJS6.Size = New System.Drawing.Size(287, 300)
         Me.chartJS6.TabIndex = 8
         Me.chartJS6.Text = "Polar Area Chart"
         '
@@ -143,14 +132,13 @@ Partial Class MainPage
         Me.chartJS5.ChartType = Wisej.Web.Ext.ChartJS.ChartType.Doughnut
         Me.flowLayoutPanel1.SetFillWeight(Me.chartJS5, 100)
         Me.chartJS5.Labels = New String() {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
-        Me.chartJS5.Location = New System.Drawing.Point(545, 330)
+        Me.chartJS5.Location = New System.Drawing.Point(624, 330)
         Me.chartJS5.Margin = New Wisej.Web.Padding(10)
         Me.chartJS5.MinimumSize = New System.Drawing.Size(200, 200)
         Me.chartJS5.Name = "chartJS5"
-        DoughnutOptions1.Legend.Display = False
-        DoughnutOptions1.Title.Text = "Doughnut Chart"
-        Me.chartJS5.Options = DoughnutOptions1
-        Me.chartJS5.Size = New System.Drawing.Size(247, 300)
+        Me.chartJS5.Options.Legend.Display = False
+        Me.chartJS5.Options.Title.Text = "Doughnut Chart"
+        Me.chartJS5.Size = New System.Drawing.Size(287, 300)
         Me.chartJS5.TabIndex = 7
         Me.chartJS5.Text = "Doughnut Chart"
         '
@@ -160,26 +148,25 @@ Partial Class MainPage
         Me.chartJS3.ChartType = Wisej.Web.Ext.ChartJS.ChartType.Pie
         Me.flowLayoutPanel1.SetFillWeight(Me.chartJS3, 100)
         Me.chartJS3.Labels = New String() {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
-        Me.chartJS3.Location = New System.Drawing.Point(10, 650)
+        Me.chartJS3.Location = New System.Drawing.Point(931, 330)
         Me.chartJS3.Margin = New Wisej.Web.Padding(10)
         Me.chartJS3.MinimumSize = New System.Drawing.Size(200, 200)
         Me.chartJS3.Name = "chartJS3"
-        PieOptions1.Legend.Display = False
-        Me.chartJS3.Options = PieOptions1
-        Me.chartJS3.Size = New System.Drawing.Size(782, 300)
+        Me.chartJS3.Options.Legend.Display = False
+        Me.chartJS3.Size = New System.Drawing.Size(287, 300)
         Me.chartJS3.TabIndex = 5
         Me.chartJS3.Text = "Pie Chart"
         '
         'flowLayoutPanel2
         '
         Me.flowLayoutPanel2.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
-        Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.flowLayoutPanel2.Controls.Add(Me.button1)
         Me.flowLayoutPanel2.Controls.Add(Me.panel1)
         Me.flowLayoutPanel2.Location = New System.Drawing.Point(67, 40)
         Me.flowLayoutPanel2.Name = "flowLayoutPanel2"
         Me.flowLayoutPanel2.Padding = New Wisej.Web.Padding(0, 15, 0, 0)
-        Me.flowLayoutPanel2.Size = New System.Drawing.Size(773, 169)
+        Me.flowLayoutPanel2.Size = New System.Drawing.Size(1199, 169)
         Me.flowLayoutPanel2.TabIndex = 16
         Me.flowLayoutPanel2.TabStop = True
         Me.flowLayoutPanel2.WrapContents = False
@@ -187,7 +174,7 @@ Partial Class MainPage
         'button1
         '
         Me.button1.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
-        Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.button1.AppearanceKey = "button-ok"
         Me.flowLayoutPanel2.SetFillWeight(Me.button1, 100)
         Me.button1.Font = New System.Drawing.Font("default", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -195,7 +182,7 @@ Partial Class MainPage
         Me.button1.Margin = New Wisej.Web.Padding(3, 3, 20, 3)
         Me.button1.MinimumSize = New System.Drawing.Size(150, 0)
         Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(304, 128)
+        Me.button1.Size = New System.Drawing.Size(730, 128)
         Me.button1.TabIndex = 1
         Me.button1.Text = "Randomize"
         '
@@ -204,7 +191,7 @@ Partial Class MainPage
         Me.panel1.Anchor = CType((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.panel1.Controls.Add(Me.label1)
         Me.panel1.Controls.Add(Me.trackBar)
-        Me.panel1.Location = New System.Drawing.Point(330, 18)
+        Me.panel1.Location = New System.Drawing.Point(756, 18)
         Me.panel1.MaximumSize = New System.Drawing.Size(440, 128)
         Me.panel1.MinimumSize = New System.Drawing.Size(440, 128)
         Me.panel1.Name = "panel1"
@@ -242,7 +229,7 @@ Partial Class MainPage
         Me.Font = New System.Drawing.Font("default", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.Margin = New Wisej.Web.Padding(7, 0, 7, 0)
         Me.Name = "MainPage"
-        Me.Size = New System.Drawing.Size(889, 709)
+        Me.Size = New System.Drawing.Size(1264, 796)
         Me.flowLayoutPanel1.ResumeLayout(False)
         Me.flowLayoutPanel2.ResumeLayout(False)
         Me.panel1.ResumeLayout(False)

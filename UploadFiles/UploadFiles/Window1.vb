@@ -1,31 +1,23 @@
 ﻿Imports System
 Imports System.Drawing
-Imports System.Web
 Imports Wisej.Web
 Imports System.IO
 
-Partial Public Class Window1
+Public Class Window1
 
-    Public Sub New()
-        InitializeComponent()
-    End Sub
-
-    Private Sub upload1_Uploaded(ByVal sender As Object, ByVal e As UploadedEventArgs)
+    Private Sub upload1_Uploaded(ByVal sender As Object, ByVal e As UploadedEventArgs) Handles upload1.Uploaded
         LoadFile(e.Files)
     End Sub
 
-    Private Sub upload2_Uploaded(ByVal sender As Object, ByVal e As UploadedEventArgs)
+    Private Sub upload2_Uploaded(ByVal sender As Object, ByVal e As UploadedEventArgs) Handles upload2.Uploaded
         LoadFiles(e.Files)
     End Sub
-
-    Private Sub pictureBox_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs)
+    Private Sub pictureBox_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs) Handles pictureBox.DragEnter, flowLayoutPanel.DragEnter
         e.Effect = DragDropEffects.Copy
     End Sub
-
-    Private Sub pictureBox_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs)
+    Private Sub pictureBox_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs) Handles pictureBox.DragDrop
         LoadFile(CType(e.Data.GetData(DataFormats.Files), HttpFileCollection))
     End Sub
-
     Private Sub flowLayoutPanel_DragEnter(ByVal sender As Object, ByVal e As DragEventArgs)
         If e.Data.GetDataPresent(DataFormats.FileDrop) Then
             e.AllowedFileTypes = "image.*"
@@ -45,25 +37,23 @@ Partial Public Class Window1
 
         e.Effect = DragDropEffects.None
     End Sub
-
-    Private Sub flowLayoutPanel_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs)
+    Private Sub flowLayoutPanel_DragDrop(ByVal sender As Object, ByVal e As DragEventArgs) Handles flowLayoutPanel.DragDrop
         LoadFiles(CType(e.Data.GetData(DataFormats.Files), HttpFileCollection))
     End Sub
 
-    Private Sub buttonClear_Click(ByVal sender As Object, ByVal e As EventArgs)
-        FlowLayoutPanel.Controls.Clear(True)
+    Private Sub buttonClear_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonClear.Click
+        flowLayoutPanel.Controls.Clear(True)
     End Sub
 
     Private Sub LoadFile(ByVal files As HttpFileCollection)
         If files Is Nothing Then Return
 
         If files.Count = 0 Then
-            PictureBox.Image = Nothing
+            pictureBox.Image = Nothing
         Else
-            PictureBox.Image = GetImageFromStream(files(0).InputStream)
+            pictureBox.Image = GetImageFromStream(files(0).InputStream)
         End If
     End Sub
-
 
     ' Process multiple files and create a new child PictureBox inside
     ' the flow layout panel. Each PictureBox handles the click event to trigger the download of the
@@ -93,11 +83,10 @@ Partial Public Class Window1
                                                End If
                                            End Sub
 
-                FlowLayoutPanel.Controls.Add(box)
+                flowLayoutPanel.Controls.Add(box)
             Next
         End If
     End Sub
-
 
     ' Reads the image from the uploaded stream and preserves the stream
     ' in case it's an animated gif.

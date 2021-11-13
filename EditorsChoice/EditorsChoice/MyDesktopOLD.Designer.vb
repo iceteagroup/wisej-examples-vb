@@ -22,11 +22,12 @@ Partial Class MyDesktopOLD
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'MyDesktop
+        'MyDesktopOLD
         '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        Me.Name = "MyDesktop"
-        Me.Size = New System.Drawing.Size(1213, 553)
+        Me.Name = "MyDesktopOLD"
+        Me.Size = New System.Drawing.Size(999, 730)
         Me.ResumeLayout(False)
 
     End Sub

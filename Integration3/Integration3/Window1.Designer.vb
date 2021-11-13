@@ -77,16 +77,16 @@ Partial Class Window1
         Me.tabControl1.Dock = Wisej.Web.DockStyle.Fill
         Me.tabControl1.Location = New System.Drawing.Point(0, 0)
         Me.tabControl1.Name = "tabControl1"
-        Me.tabControl1.PageInsets = New Wisej.Web.Padding(1, 30, 1, 1)
+        Me.tabControl1.PageInsets = New Wisej.Web.Padding(1, 35, 1, 1)
         Me.tabControl1.Size = New System.Drawing.Size(986, 661)
         Me.tabControl1.TabIndex = 0
         '
         'tabPage2
         '
         Me.tabPage2.Controls.Add(Me.widgetDonut)
-        Me.tabPage2.Location = New System.Drawing.Point(1, 30)
+        Me.tabPage2.Location = New System.Drawing.Point(1, 35)
         Me.tabPage2.Name = "tabPage2"
-        Me.tabPage2.Size = New System.Drawing.Size(984, 630)
+        Me.tabPage2.Size = New System.Drawing.Size(984, 625)
         Me.tabPage2.Text = "Donut"
         '
         'widgetDonut
@@ -96,19 +96,14 @@ Partial Class Window1
         Me.widgetDonut.Location = New System.Drawing.Point(0, 0)
         Me.widgetDonut.Name = "widgetDonut"
         Me.widgetDonut.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Package1.Integrity = Nothing
         Package1.Name = "jquery-1.12.3.min.js"
         Package1.Source = "https://code.jquery.com/jquery-1.12.3.min.js"
-        Package2.Integrity = Nothing
         Package2.Name = "kendo.all.min.js"
         Package2.Source = "https://kendo.cdn.telerik.com/2017.2.621/js/kendo.all.min.js"
-        Package3.Integrity = Nothing
         Package3.Name = "kendo.common.min.css"
         Package3.Source = "https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.common.min.css"
-        Package4.Integrity = Nothing
         Package4.Name = "kendo.default.min.css"
         Package4.Source = "https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.default.min.css"
-        Package5.Integrity = Nothing
         Package5.Name = "kendo.default.mobile.min.css"
         Package5.Source = "https://kendo.cdn.telerik.com/2017.2.621/styles/kendo.default.mobile.min.css"
         Me.widgetDonut.Packages.Add(Package1)
@@ -116,16 +111,16 @@ Partial Class Window1
         Me.widgetDonut.Packages.Add(Package3)
         Me.widgetDonut.Packages.Add(Package4)
         Me.widgetDonut.Packages.Add(Package5)
-        Me.widgetDonut.Size = New System.Drawing.Size(984, 630)
+        Me.widgetDonut.Size = New System.Drawing.Size(984, 625)
         Me.widgetDonut.TabIndex = 0
         Me.widgetDonut.Text = "widget1"
         '
         'tabPage1
         '
         Me.tabPage1.Controls.Add(Me.tableLayoutPanel2)
-        Me.tabPage1.Location = New System.Drawing.Point(1, 30)
+        Me.tabPage1.Location = New System.Drawing.Point(1, 35)
         Me.tabPage1.Name = "tabPage1"
-        Me.tabPage1.Size = New System.Drawing.Size(984, 630)
+        Me.tabPage1.Size = New System.Drawing.Size(984, 625)
         Me.tabPage1.Text = "Pie"
         '
         'tableLayoutPanel2
@@ -140,7 +135,7 @@ Partial Class Window1
         Me.tableLayoutPanel2.Name = "tableLayoutPanel2"
         Me.tableLayoutPanel2.RowCount = 1
         Me.tableLayoutPanel2.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel2.Size = New System.Drawing.Size(984, 630)
+        Me.tableLayoutPanel2.Size = New System.Drawing.Size(984, 625)
         Me.tableLayoutPanel2.TabIndex = 1
         Me.tableLayoutPanel2.TabStop = True
         '
@@ -152,7 +147,7 @@ Partial Class Window1
         Me.flowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
         Me.flowLayoutPanel1.Name = "flowLayoutPanel1"
         Me.flowLayoutPanel1.Padding = New Wisej.Web.Padding(20)
-        Me.flowLayoutPanel1.Size = New System.Drawing.Size(190, 624)
+        Me.flowLayoutPanel1.Size = New System.Drawing.Size(190, 619)
         Me.flowLayoutPanel1.TabIndex = 1
         Me.flowLayoutPanel1.TabStop = True
         '
@@ -161,7 +156,7 @@ Partial Class Window1
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(23, 23)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(69, 15)
+        Me.label1.Size = New System.Drawing.Size(70, 15)
         Me.label1.TabIndex = 0
         Me.label1.Text = "Select year"
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -183,16 +178,16 @@ Partial Class Window1
         Me.widgetPie.Location = New System.Drawing.Point(199, 3)
         Me.widgetPie.Name = "widgetPie"
         Me.widgetPie.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetPie.Size = New System.Drawing.Size(782, 624)
+        Me.widgetPie.Size = New System.Drawing.Size(782, 619)
         Me.widgetPie.TabIndex = 0
         Me.widgetPie.Text = "widget1"
         '
         'tabPage3
         '
         Me.tabPage3.Controls.Add(Me.tableLayoutPanel1)
-        Me.tabPage3.Location = New System.Drawing.Point(1, 30)
+        Me.tabPage3.Location = New System.Drawing.Point(1, 35)
         Me.tabPage3.Name = "tabPage3"
-        Me.tabPage3.Size = New System.Drawing.Size(984, 630)
+        Me.tabPage3.Size = New System.Drawing.Size(984, 625)
         Me.tabPage3.Text = "QRCodes"
         '
         'tableLayoutPanel1
@@ -210,7 +205,7 @@ Partial Class Window1
         Me.tableLayoutPanel1.RowCount = 2
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Percent, 50.0!))
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Percent, 50.0!))
-        Me.tableLayoutPanel1.Size = New System.Drawing.Size(984, 630)
+        Me.tableLayoutPanel1.Size = New System.Drawing.Size(984, 625)
         Me.tableLayoutPanel1.TabIndex = 0
         Me.tableLayoutPanel1.TabStop = True
         '
@@ -219,10 +214,10 @@ Partial Class Window1
         Me.panel4.Controls.Add(Me.tableLayoutPanel3)
         Me.panel4.Controls.Add(Me.widgetQRfreeText)
         Me.panel4.Dock = Wisej.Web.DockStyle.Fill
-        Me.panel4.Location = New System.Drawing.Point(495, 318)
+        Me.panel4.Location = New System.Drawing.Point(495, 315)
         Me.panel4.Name = "panel4"
         Me.panel4.ShowHeader = True
-        Me.panel4.Size = New System.Drawing.Size(486, 309)
+        Me.panel4.Size = New System.Drawing.Size(486, 307)
         Me.panel4.TabIndex = 3
         Me.panel4.TabStop = True
         Me.panel4.Text = "free text"
@@ -270,7 +265,7 @@ Partial Class Window1
         Me.widgetQRfreeText.Location = New System.Drawing.Point(122, 45)
         Me.widgetQRfreeText.Name = "widgetQRfreeText"
         Me.widgetQRfreeText.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetQRfreeText.Size = New System.Drawing.Size(262, 193)
+        Me.widgetQRfreeText.Size = New System.Drawing.Size(262, 191)
         Me.widgetQRfreeText.TabIndex = 0
         Me.widgetQRfreeText.Text = "widget1"
         '
@@ -278,10 +273,10 @@ Partial Class Window1
         '
         Me.panel3.Controls.Add(Me.widgetQRurl)
         Me.panel3.Dock = Wisej.Web.DockStyle.Fill
-        Me.panel3.Location = New System.Drawing.Point(3, 318)
+        Me.panel3.Location = New System.Drawing.Point(3, 315)
         Me.panel3.Name = "panel3"
         Me.panel3.ShowHeader = True
-        Me.panel3.Size = New System.Drawing.Size(486, 309)
+        Me.panel3.Size = New System.Drawing.Size(486, 307)
         Me.panel3.TabIndex = 2
         Me.panel3.TabStop = True
         Me.panel3.Text = "url"
@@ -295,7 +290,7 @@ Partial Class Window1
         Me.widgetQRurl.Location = New System.Drawing.Point(99, 45)
         Me.widgetQRurl.Name = "widgetQRurl"
         Me.widgetQRurl.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetQRurl.Size = New System.Drawing.Size(263, 193)
+        Me.widgetQRurl.Size = New System.Drawing.Size(263, 191)
         Me.widgetQRurl.TabIndex = 0
         Me.widgetQRurl.Text = "widget1"
         '
@@ -306,7 +301,7 @@ Partial Class Window1
         Me.panel2.Location = New System.Drawing.Point(495, 3)
         Me.panel2.Name = "panel2"
         Me.panel2.ShowHeader = True
-        Me.panel2.Size = New System.Drawing.Size(486, 309)
+        Me.panel2.Size = New System.Drawing.Size(486, 306)
         Me.panel2.TabIndex = 1
         Me.panel2.TabStop = True
         Me.panel2.Text = "geo"
@@ -320,7 +315,7 @@ Partial Class Window1
         Me.widgetQRgeo.Location = New System.Drawing.Point(122, 42)
         Me.widgetQRgeo.Name = "widgetQRgeo"
         Me.widgetQRgeo.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetQRgeo.Size = New System.Drawing.Size(262, 194)
+        Me.widgetQRgeo.Size = New System.Drawing.Size(262, 191)
         Me.widgetQRgeo.TabIndex = 0
         Me.widgetQRgeo.Text = "widget1"
         '
@@ -331,7 +326,7 @@ Partial Class Window1
         Me.panel1.Location = New System.Drawing.Point(3, 3)
         Me.panel1.Name = "panel1"
         Me.panel1.ShowHeader = True
-        Me.panel1.Size = New System.Drawing.Size(486, 309)
+        Me.panel1.Size = New System.Drawing.Size(486, 306)
         Me.panel1.TabIndex = 0
         Me.panel1.TabStop = True
         Me.panel1.Text = "email"
@@ -345,13 +340,13 @@ Partial Class Window1
         Me.widgetQRemail.Location = New System.Drawing.Point(99, 42)
         Me.widgetQRemail.Name = "widgetQRemail"
         Me.widgetQRemail.Options = CType(Wisej.Core.WisejSerializer.Parse("{}"), Wisej.Core.DynamicObject)
-        Me.widgetQRemail.Size = New System.Drawing.Size(263, 194)
+        Me.widgetQRemail.Size = New System.Drawing.Size(263, 191)
         Me.widgetQRemail.TabIndex = 0
         Me.widgetQRemail.Text = "widget1"
         '
         'Window1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(986, 661)
         Me.CloseBox = False

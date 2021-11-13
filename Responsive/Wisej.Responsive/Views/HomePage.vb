@@ -14,16 +14,17 @@ Namespace Views
             Dim viewName As String = args.ViewName
             Dim view As Control = CType(Application.FindComponent(Function(o) TypeOf o Is Control AndAlso Equals(CType(o, Control).Name, viewName)), Control)
 
-            If view IsNot Nothing Then
-                view.BringToFront()
-            Else
+            If view Is Nothing Then
                 Dim type As Type = Type.GetType("Wisej.Responsive.Views." & viewName, True)
                 view = CType(Activator.CreateInstance(type), Control)
-                view.Parent = WorkspacePanel
+                view.Parent = workspacePanel
                 view.Dock = DockStyle.Fill
                 AddHandler view.Disposed, Sub(s, e) optionsPanel1.UpdateState()
                 optionsPanel1.UpdateState()
             End If
+
+            view.BringToFront()
+
         End Sub
     End Class
 End Namespace

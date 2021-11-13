@@ -148,7 +148,7 @@ Namespace MultiHtml
             '
             'AdministrationPage
             '
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
             Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
             Me.Controls.Add(Me.jsonFile)
             Me.Controls.Add(Me.navigateToSuppliersHtml)
@@ -162,7 +162,7 @@ Namespace MultiHtml
             Me.Controls.Add(Me.url)
             Me.Controls.Add(Me.label1)
             Me.Name = "AdministrationPage"
-            Me.Size = New System.Drawing.Size(875, 821)
+            Me.Size = New System.Drawing.Size(944, 739)
             Me.Text = "Administration Page"
             Me.ResumeLayout(False)
             Me.PerformLayout()

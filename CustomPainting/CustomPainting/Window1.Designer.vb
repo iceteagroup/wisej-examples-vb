@@ -31,56 +31,59 @@ Partial Class Window1
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        panel1 = New Wisej.Web.Panel()
-        button1 = New Wisej.Web.Button()
-        mandelbrotPanel1 = New MandelbrotPanel()
-        panel1.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' panel1
-        ' 
-        panel1.Anchor = Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left Or Wisej.Web.AnchorStyles.Right
-        panel1.BorderStyle = Wisej.Web.BorderStyle.Double
-        panel1.Controls.Add(mandelbrotPanel1)
-        panel1.Location = New Drawing.Point(30, 30)
-        panel1.Name = "panel1"
-        panel1.ShowCloseButton = False
-        panel1.ShowHeader = True
-        panel1.Size = New Drawing.Size(599, 324)
-        panel1.TabIndex = 2
-        panel1.Text = "Mandelbrot Panel (resize the window to see the redraw)"
-        ' 
-        ' button1
-        ' 
-        button1.Anchor = Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left Or Wisej.Web.AnchorStyles.Right
-        button1.Location = New Drawing.Point(30, 373)
-        button1.Name = "button1"
-        button1.Size = New Drawing.Size(599, 72)
-        button1.TabIndex = 1
-        button1.Text = "Yes, you can paint here too!"
-        AddHandler button1.Paint, New Wisej.Web.PaintEventHandler(AddressOf button1_Paint)
-        ' 
-        ' mandelbrotPanel1
-        ' 
-        mandelbrotPanel1.Dock = Wisej.Web.DockStyle.Fill
-        mandelbrotPanel1.Location = New Drawing.Point(0, 0)
-        mandelbrotPanel1.Name = "mandelbrotPanel1"
-        mandelbrotPanel1.Size = New Drawing.Size(597, 294)
-        mandelbrotPanel1.TabIndex = 3
-        ' 
-        ' Window1
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(6.0F, 17.0F)
-        AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        ClientSize = New Drawing.Size(650, 461)
-        ControlBox = False
-        Controls.Add(button1)
-        Controls.Add(panel1)
-        MinimizeBox = False
-        Name = "Window1"
-        Text = "Window1"
-        panel1.ResumeLayout(False)
-        ResumeLayout(False)
+        Me.panel1 = New Wisej.Web.Panel()
+        Me.mandelbrotPanel1 = New CustomPainting.MandelbrotPanel()
+        Me.button1 = New Wisej.Web.Button()
+        Me.panel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'panel1
+        '
+        Me.panel1.Anchor = CType((((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Bottom) _
+            Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+        Me.panel1.BorderStyle = Wisej.Web.BorderStyle.[Double]
+        Me.panel1.Controls.Add(Me.mandelbrotPanel1)
+        Me.panel1.Location = New System.Drawing.Point(30, 30)
+        Me.panel1.Name = "panel1"
+        Me.panel1.ShowCloseButton = False
+        Me.panel1.ShowHeader = True
+        Me.panel1.Size = New System.Drawing.Size(599, 324)
+        Me.panel1.TabIndex = 2
+        Me.panel1.TabStop = True
+        Me.panel1.Text = "Mandelbrot Panel (resize the window to see the redraw)"
+        '
+        'mandelbrotPanel1
+        '
+        Me.mandelbrotPanel1.Dock = Wisej.Web.DockStyle.Fill
+        Me.mandelbrotPanel1.Name = "mandelbrotPanel1"
+        Me.mandelbrotPanel1.Size = New System.Drawing.Size(593, 290)
+        Me.mandelbrotPanel1.TabIndex = 3
+        '
+        'button1
+        '
+        Me.button1.Anchor = CType(((Wisej.Web.AnchorStyles.Bottom Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
+        Me.button1.Location = New System.Drawing.Point(30, 373)
+        Me.button1.Name = "button1"
+        Me.button1.Size = New System.Drawing.Size(599, 72)
+        Me.button1.TabIndex = 1
+        Me.button1.Text = "Yes, you can paint here too!"
+        '
+        'Window1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(650, 461)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.button1)
+        Me.Controls.Add(Me.panel1)
+        Me.MinimizeBox = False
+        Me.Name = "Window1"
+        Me.Text = "Window1"
+        Me.panel1.ResumeLayout(False)
+        Me.ResumeLayout(False)
+
     End Sub
 
 
