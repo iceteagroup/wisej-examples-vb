@@ -2,7 +2,7 @@
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Window1
-    Inherits Form
+    Inherits Wisej.Web.Form
     ''' <summary>
     ''' Required designer variable.
     ''' </summary>
