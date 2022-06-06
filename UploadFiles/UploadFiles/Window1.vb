@@ -2,6 +2,7 @@
 Imports System.Drawing
 Imports Wisej.Web
 Imports System.IO
+Imports Wisej.Core
 
 Public Class Window1
 
