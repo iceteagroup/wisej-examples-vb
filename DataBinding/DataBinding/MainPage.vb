@@ -1,6 +1,6 @@
 ﻿Imports System
-Imports DataBinding.Model
-Imports DataBinding.Views
+Imports DataBinding.DataBinding.Model
+Imports DataBinding.DataBinding.Views
 Imports Wisej.Web
 
 Namespace DataBinding

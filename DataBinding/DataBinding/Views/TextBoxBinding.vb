@@ -1,4 +1,4 @@
-﻿Imports DataBinding.Model
+﻿Imports DataBinding.DataBinding.Model
 Imports Wisej.Web
 
 Namespace DataBinding.Views

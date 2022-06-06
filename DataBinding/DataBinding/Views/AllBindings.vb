@@ -1,5 +1,5 @@
 ﻿Imports Wisej.Web
-Imports DataBinding.Model
+Imports DataBinding.DataBinding.Model
 
 Namespace DataBinding.Views
     Public Partial Class AllBindings

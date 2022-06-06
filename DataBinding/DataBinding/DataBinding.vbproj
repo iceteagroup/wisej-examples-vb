@@ -1,227 +1,66 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
-    <SchemaVersion>
-    </SchemaVersion>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'=='net'">
+    <OutputPath>bin\</OutputPath>
+    <StartupObject></StartupObject>
     <OutputType>Library</OutputType>
-    <RootNamespace>
-    </RootNamespace>
-    <AssemblyName>DataBinding</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <MyType>Custom</MyType>
-    <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
-    <Use64BitIISExpress />
-    <UseGlobalApplicationHostFile />
-    <ProjectGuid>{8B967430-89A7-4438-B4E4-F14F6A9CFCA5}</ProjectGuid>
-    <TargetFrameworkProfile />
+    <RunCommand>$(ProgramFiles)\IIS Express\iisexpress.exe</RunCommand>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RunArguments>/path:"$(MSBuildProjectDirectory)" /port:5000</RunArguments>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+
+  <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'!='net'">
+    <StartupObject>$(RootNamespace).Startup</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'=='net'">
+    <Reference Include="mscorlib" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
+    <Compile Remove="Startup.vb" />
+    <Content Include="Startup.vb"/>
+	
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Wisej-2">
-      <Version>2.5.20</Version>
-    </PackageReference>
+    <Folder Include="Themes\" />
   </ItemGroup>
+
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Collections.Specialized" />
-    <Import Include="System.Configuration" />
-    <Import Include="System.Web" />
-    <Import Include="Wisej.Web" />
-    <Import Include="Wisej.Web.VisualBasic" />
+    <Content Update="Default.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Web.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  
   <ItemGroup>
-    <Content Include="Default.html" />
-    <Content Include="Web.config" />
-    <Content Include="favicon.ico" />
+    <None Remove="Default.html" />
+    <None Remove="favicon.ico" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="MainPage.designer.vb">
-      <DependentUpon>MainPage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Model\EnumExtension.vb" />
-    <Compile Include="Model\States.vb" />
-    <Compile Include="Model\Vendor.vb" />
-    <Compile Include="Model\VendorList.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
-      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
-      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Program.vb" />
-    <Compile Include="Page1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page1.Designer.vb">
-      <DependentUpon>Page1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\AllBindings.Designer.vb">
-      <DependentUpon>AllBindings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AllBindings.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DataGridBinding.Designer.vb">
-      <DependentUpon>DataGridBinding.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataGridBinding.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\TextBoxBinding.Designer.vb">
-      <DependentUpon>TextBoxBinding.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\TextBoxBinding.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Content Include="Default.html">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="favicon.ico">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.resx">
-      <DependentUpon>MainPage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AllBindings.resx">
-      <DependentUpon>AllBindings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataGridBinding.resx">
-      <DependentUpon>DataGridBinding.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\TextBoxBinding.resx">
-      <DependentUpon>TextBoxBinding.vb</DependentUpon>
-    </EmbeddedResource>
+    <PackageReference Include="Wisej-3" Version="3.*-*" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Default.json" />
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <Content Include="Themes\Classic-2.theme" />
-    <Content Include="Themes\Classic-3.theme" />
-    <Content Include="Themes\Vista-2.theme" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:18053/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
+
+
 </Project>
