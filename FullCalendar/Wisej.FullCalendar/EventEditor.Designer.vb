@@ -2,7 +2,7 @@
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class EventEditor
-    Inherits Form
+    Inherits Wisej.Web.Form
     ''' <summary>
     ''' Required designer variable.
     ''' </summary>

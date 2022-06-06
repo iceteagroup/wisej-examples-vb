@@ -1,7 +1,7 @@
 ﻿
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainPage
-    Inherits Page
+    Inherits Wisej.Web.Page
 
     ''' <summary> 
     ''' Required designer variable.
