@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.ComponentModel
 Imports System.Drawing.Design
+Imports System.Drawing
 Imports Wisej.Web
 
 Partial Public Class ItemPanel
@@ -16,7 +17,7 @@ Partial Public Class ItemPanel
     End Sub
 
     <TypeConverter("Wisej.Web.Design.ImageSourceConverter, Wisej.Web.Design")>
-    <Editor("Wisej.Web.Design.ImageSourceEditor, Wisej.Web.Design", GetType(UITypeEditor))>
+    <Editor("Wisej.Web.Design.ImageSourceEditor, Wisej.Web.Design", GetType(Wisej.Web.UITypeEditor))>
     Public Property ImageSource As String
         Get
             Return icon.ImageSource

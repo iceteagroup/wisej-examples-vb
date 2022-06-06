@@ -28,28 +28,27 @@ Partial Class Page1
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        containerPanel1 = New ContainerPanel()
-        SuspendLayout()
-        ' 
-        ' containerPanel1
-        ' 
-        containerPanel1.AutoScroll = True
-        containerPanel1.BorderStyle = Web.BorderStyle.Solid
-        containerPanel1.Location = New Drawing.Point(100, 74)
-        containerPanel1.Name = "containerPanel1"
-        containerPanel1.Size = New Drawing.Size(384, 582)
-        containerPanel1.TabIndex = 0
-        AddHandler containerPanel1.LoadPanels, New EventHandler(AddressOf containerPanel1_LoadPanels)
-        ' 
-        ' Page1
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(7.0F, 16.0F)
-        AutoScaleMode = Web.AutoScaleMode.Font
-        Controls.Add(containerPanel1)
-        Name = "Page1"
-        Size = New Drawing.Size(1277, 850)
-        Text = "Page1"
-        ResumeLayout(False)
+        Me.containerPanel1 = New Wisej.LazyLoadingPanel.ContainerPanel()
+        Me.SuspendLayout()
+        '
+        'containerPanel1
+        '
+        Me.containerPanel1.BorderStyle = Wisej.Web.BorderStyle.Solid
+        Me.containerPanel1.Location = New System.Drawing.Point(100, 74)
+        Me.containerPanel1.Name = "containerPanel1"
+        Me.containerPanel1.Size = New System.Drawing.Size(384, 582)
+        Me.containerPanel1.TabIndex = 0
+        '
+        'Page1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.Controls.Add(Me.containerPanel1)
+        Me.Name = "Page1"
+        Me.Size = New System.Drawing.Size(842, 627)
+        Me.Text = "Page1"
+        Me.ResumeLayout(False)
+
     End Sub
 
 #End Region

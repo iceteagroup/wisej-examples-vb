@@ -7,7 +7,7 @@ Partial Public Class Page1
         InitializeComponent()
     End Sub
 
-    Private Sub containerPanel1_LoadPanels(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub containerPanel1_LoadPanels(ByVal sender As Object, ByVal e As EventArgs) Handles containerPanel1.Load
         Dim container = CType(sender, ContainerPanel)
         Dim count = container.Controls.Count
 
@@ -32,7 +32,7 @@ Partial Public Class Page1
         End If
     End Sub
 
-    Private Sub itemPanel_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub itemPanel_Click(ByVal sender As Object, ByVal e As EventArgs) Handles containerPanel1.Click
         Dim panel = CType(sender, ItemPanel)
         AlertBox.Show($"Action click on {panel.Title}")
     End Sub
