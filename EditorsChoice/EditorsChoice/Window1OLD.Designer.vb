@@ -66,7 +66,7 @@ Partial Class Window1OLD
 
     End Sub
 
-    Friend WithEvents TinyEditor1 As Ext.TinyEditor.TinyEditor
-    Friend WithEvents TinyMCE1 As Ext.TinyMCE.TinyMCE
-    Friend WithEvents CkEditor1 As Ext.CKEditor.CKEditor
+    Friend WithEvents TinyEditor1 As Wisej.Web.Ext.TinyEditor.TinyEditor
+    Friend WithEvents TinyMCE1 As Wisej.Web.Ext.TinyMCE.TinyMCE
+    Friend WithEvents CkEditor1 As Wisej.Web.Ext.CKEditor.CKEditor
 End Class
