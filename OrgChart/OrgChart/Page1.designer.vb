@@ -77,6 +77,6 @@
 
 #End Region
 
-    Friend WithEvents widget1 As Widget
-    Friend WithEvents button1 As Button
+    Friend WithEvents widget1 As Wisej.Web.Widget
+    Friend WithEvents button1 As Wisej.Web.Button
 End Class
