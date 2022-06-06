@@ -17,9 +17,35 @@ Partial Public Class Page1
         Dim color = ColorTranslator.FromHtml("#" & e.Data.color)
         label1.ForeColor = color
         widgetTreeMap.Call("setBaseColor", "#" & e.Data.color)
-        Dim lightColor = Winforms.ControlPaint.Light(color)
+
+        Dim lightColor As Color = ChangeColorBrightness(color, CType(0.2, Single))
         widgetTagCloud.Call("setColors", ColorTranslator.ToHtml(lightColor), ColorTranslator.ToHtml(color))
     End Sub
+
+
+    Private Shared Function ChangeColorBrightness(ByVal color As Color, ByVal correctionFactor As Single) As Color
+        Dim red As Single = CType(color.R, Single)
+        Dim green As Single = CType(color.G, Single)
+        Dim blue As Single = CType(color.B, Single)
+        If (correctionFactor < 0) Then
+            correctionFactor = (1 + correctionFactor)
+            red = (red * correctionFactor)
+            green = (green * correctionFactor)
+            blue = (blue * correctionFactor)
+        Else
+            red = (((255 - red) _
+                        * correctionFactor) _
+                        + red)
+            green = (((255 - green) _
+                        * correctionFactor) _
+                        + green)
+            blue = (((255 - blue) _
+                        * correctionFactor) _
+                        + blue)
+        End If
+
+        Return Color.FromArgb(color.A, CType(red, Integer), CType(green, Integer), CType(blue, Integer))
+    End Function
 
     Private Function getData() As String
         Dim json = "[

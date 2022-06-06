@@ -16,7 +16,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Integration4")>
-<Assembly: AssemblyCopyright("Copyright © 2020")>
+<Assembly: AssemblyCopyright("Copyright © 2022")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
