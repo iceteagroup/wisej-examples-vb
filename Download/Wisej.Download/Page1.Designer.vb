@@ -2,7 +2,7 @@
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Page1
-    Inherits Page
+    Inherits Wisej.Web.Page
 
 
     ''' <summary>

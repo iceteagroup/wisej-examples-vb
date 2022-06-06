@@ -52,7 +52,7 @@ Partial Public Class Page1
 
         ' now that we have the ZIP, handle the request individually
         Dim response = context.Response
-        response.AddHeader("Content-Type", "application/zip")
+        response.AppendHeader("Content-Type", "application/zip")
 
         Dim oAux As ContentDisposition = New ContentDisposition()
         oAux.FileName = "test.zip"
@@ -62,7 +62,7 @@ Partial Public Class Page1
         'TODO Comment code not transpose automaticly from C#
         'response.AppendHeader("Content-Disposition", New ContentDisposition(
         '        ' provide a filename to use
-        '.FileName = "test.zip",
+        '.FileName = "test.zip", 
         '        ' DispositionType can be "inline" or "attachment"
         '        .DispositionType = "inline"
         ').ToString())
