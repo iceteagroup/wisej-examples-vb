@@ -119,6 +119,6 @@ Partial Class MainWindow
     Friend WithEvents separator1 As Wisej.Web.ToolBarButton
     Friend WithEvents separator2 As Wisej.Web.ToolBarButton
     Friend WithEvents showHideThumbnails As Wisej.Web.ToolBarButton
-    Friend WithEvents addMdiChild As ToolBarButton
-    Friend WithEvents showModeless As ToolBarButton
+    Friend WithEvents addMdiChild As Wisej.Web.ToolBarButton
+    Friend WithEvents showModeless As Wisej.Web.ToolBarButton
 End Class

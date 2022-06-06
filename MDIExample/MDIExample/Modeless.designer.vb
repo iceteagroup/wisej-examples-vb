@@ -29,20 +29,33 @@ Partial Class Modeless
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        SuspendLayout()
-        ' 
-        ' Modeless
-        ' 
-        AutoScaleDimensions = New Drawing.SizeF(7.0F, 16.0F)
-        AutoScaleMode = Wisej.Web.AutoScaleMode.Font
-        ClientSize = New Drawing.Size(369, 337)
-        MaximizeBox = False
-        MinimizeBox = False
-        Name = "Modeless"
-        ShowInTaskbar = False
-        Text = "Statistics"
-        ResumeLayout(False)
+        Me.Button1 = New Wisej.Web.Button()
+        Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(236, 274)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(116, 42)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Close"
+        '
+        'Modeless
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(369, 337)
+        Me.Controls.Add(Me.Button1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "Modeless"
+        Me.ShowInTaskbar = False
+        Me.Text = "Statistics"
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents Button1 As Wisej.Web.Button
 
 #End Region
 End Class

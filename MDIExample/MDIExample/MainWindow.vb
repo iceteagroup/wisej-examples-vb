@@ -51,6 +51,22 @@ Partial Public Class MainWindow
             .MdiParent = Me
         }
         form.Show()
+
+        Dim indexCount As Integer = (MdiClient.TabControl.TabPages.Count - 1)
+        Dim color As Color
+        Select Case (indexCount)
+            Case 0
+                color = Color.Green
+            Case 1
+                color = Color.Red
+            Case 2
+                color = Color.Orange
+            Case Else
+                color = Color.DarkGray
+        End Select
+
+        MdiClient.TabControl.TabPages(indexCount).TabBackColor = color
+
     End Sub
 
     Private Sub ShowModelessSub()
