@@ -122,12 +122,12 @@ Partial Class Window1
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Wisej.Web.Button
+    Friend WithEvents Button2 As Wisej.Web.Button
+    Friend WithEvents Button3 As Wisej.Web.Button
+    Friend WithEvents Panel1 As Wisej.Web.Panel
+    Friend WithEvents Label2 As Wisej.Web.Label
+    Friend WithEvents Label As Wisej.Web.Label
+    Friend WithEvents Label1 As Wisej.Web.Label
+    Friend WithEvents PictureBox1 As Wisej.Web.PictureBox
 End Class
