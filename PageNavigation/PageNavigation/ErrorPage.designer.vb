@@ -98,5 +98,5 @@ Partial Class ErrorPage
     Friend WithEvents continueButton As Wisej.Web.Button
     Friend WithEvents details As Wisej.Web.Label
     Friend WithEvents [exit] As Wisej.Web.Button
-    Friend WithEvents exitButton As Button
+    Friend WithEvents exitButton As Wisej.Web.Button
 End Class
