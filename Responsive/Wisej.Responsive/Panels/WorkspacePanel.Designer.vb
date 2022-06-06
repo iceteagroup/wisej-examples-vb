@@ -1,4 +1,6 @@
-﻿Namespace Panels
+﻿Imports Wisej.Web
+
+Namespace Panels
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class WorkspacePanel

@@ -1,4 +1,6 @@
-﻿Namespace Views
+﻿Imports Wisej.Web
+
+Namespace Views
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class ViewBase

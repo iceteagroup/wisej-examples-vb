@@ -1,279 +1,74 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
-    <SchemaVersion>
-    </SchemaVersion>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'=='net'">
+    <OutputPath>bin\</OutputPath>
+    <StartupObject></StartupObject>
     <OutputType>Library</OutputType>
-    <RootNamespace>Wisej.Responsive</RootNamespace>
-    <AssemblyName>Wisej.Responsive</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <MyType>Custom</MyType>
-    <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
-    <Use64BitIISExpress />
-    <UseGlobalApplicationHostFile />
-    <ProjectGuid>{C158D683-6DF6-43F0-B938-CEAB0857028E}</ProjectGuid>
-    <TargetFrameworkProfile />
+    <RunCommand>$(ProgramFiles)\IIS Express\iisexpress.exe</RunCommand>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RunArguments>/path:"$(MSBuildProjectDirectory)" /port:5000</RunArguments>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+
+  <PropertyGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'!='net'">
+    <StartupObject>$(RootNamespace).Startup</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))'=='net'">
+    <Reference Include="mscorlib" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml.Linq" />
+    <Compile Remove="Startup.vb" />
+    <Content Include="Startup.vb" />
   </ItemGroup>
+
+
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Model\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
+
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Collections.Specialized" />
-    <Import Include="System.Configuration" />
-    <Import Include="System.Web" />
-    <Import Include="Wisej.Web" />
-    <Import Include="Wisej.Web.VisualBasic" />
+    <Content Update="Default.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Web.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  
   <ItemGroup>
-    <Content Include="Default.html" />
-    <Content Include="Images\Background.jpg" />
-    <Content Include="Images\Wisej-Logo-64x64.png" />
-    <Content Include="Web.config" />
-    <Content Include="favicon.ico" />
+    <None Remove="Default.html" />
+    <None Remove="favicon.ico" />
   </ItemGroup>
+  
   <ItemGroup>
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
-      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
-      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Panels\OptionsPanel.Designer.vb">
-      <DependentUpon>OptionsPanel.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Panels\OptionsPanel.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panels\WorkspacePanel.Designer.vb">
-      <DependentUpon>WorkspacePanel.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Panels\WorkspacePanel.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Program.vb" />
-    <Compile Include="Views\CustomersView.Designer.vb">
-      <DependentUpon>CustomersView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CustomersView.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\DashboardView.Designer.vb">
-      <DependentUpon>DashboardView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DashboardView.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\HomePage.Designer.vb">
-      <DependentUpon>HomePage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HomePage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\LoginPage.Designer.vb">
-      <DependentUpon>LoginPage.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\LoginPage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ProductsView.Designer.vb">
-      <DependentUpon>ProductsView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ProductsView.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ViewBase.Designer.vb">
-      <DependentUpon>ViewBase.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ViewBase.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Content Include="Default.html">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Include="favicon.ico">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panels\OptionsPanel.resx">
-      <DependentUpon>OptionsPanel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panels\WorkspacePanel.resx">
-      <DependentUpon>WorkspacePanel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\CustomersView.resx">
-      <DependentUpon>CustomersView.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardView.resx">
-      <DependentUpon>DashboardView.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\HomePage.resx">
-      <DependentUpon>HomePage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\LoginPage.resx">
-      <DependentUpon>LoginPage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ProductsView.resx">
-      <DependentUpon>ProductsView.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ViewBase.resx">
-      <DependentUpon>ViewBase.vb</DependentUpon>
-    </EmbeddedResource>
+    <PackageReference Include="Wisej-3" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-ElegantIcons" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-MaterialDesign" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-ModernUI" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-AspNetControl" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-ChartJS" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-FullCalendar" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-JustGage" Version="3.*-*" />
+	<PackageReference Include="Wisej-3-ProgressCircle" Version="3.*-*" />	
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Default.json" />
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <Content Include="Themes\Application.mixin.theme" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Wisej-2">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-AspNetControl">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-ChartJs">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-ElegantIcons">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-FullCalendar">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-JustGage">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-MaterialDesign">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-ModernUI">
-      <Version>2.5.20</Version>
-    </PackageReference>
-    <PackageReference Include="Wisej-2-ProgressCircle">
-      <Version>2.5.20</Version>
-    </PackageReference>
-  </ItemGroup>
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4205/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
+
+
 </Project>

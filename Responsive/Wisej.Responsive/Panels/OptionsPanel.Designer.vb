@@ -1,4 +1,6 @@
-﻿Namespace Panels
+﻿Imports Wisej.Web
+
+Namespace Panels
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class OptionsPanel
@@ -131,12 +133,12 @@
 
 #End Region
 
-        Friend WithEvents buttonProducts As Button
-        Friend WithEvents pictureBox1 As PictureBox
-        Friend WithEvents label1 As Label
-        Friend WithEvents imageList As ImageList
-        Friend WithEvents buttonCustomers As Button
-        Friend WithEvents buttonDashboard As Button
-        Friend WithEvents styleSheet As StyleSheet
+        Friend WithEvents buttonProducts As Wisej.Web.Button
+        Friend WithEvents pictureBox1 As Wisej.Web.PictureBox
+        Friend WithEvents label1 As Wisej.Web.Label
+        Friend WithEvents imageList As Wisej.Web.ImageList
+        Friend WithEvents buttonCustomers As Wisej.Web.Button
+        Friend WithEvents buttonDashboard As Wisej.Web.Button
+        Friend WithEvents styleSheet As Wisej.Web.StyleSheet
     End Class
 End Namespace
