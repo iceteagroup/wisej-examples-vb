@@ -4,6 +4,8 @@ Imports Wisej.Web
 
 Partial Public Class Page1
 
+    'Note: The office viewer extension run on IIS
+    'not run on IISExpress
     Public Sub New()
         InitializeComponent()
     End Sub
