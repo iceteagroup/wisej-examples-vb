@@ -100,7 +100,7 @@ Partial Class MainPage
         '
         Me.label1.Dock = Wisej.Web.DockStyle.Top
         Me.label1.Font = New System.Drawing.Font("default", 50.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.label1.Image = Global.BackgroundTasks.My.Resources.Resources._64x64
+        'Me.label1.Image = Global.BackgroundTasks.My.Resources.Resources._64x64
         Me.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.label1.Location = New System.Drawing.Point(0, 0)
         Me.label1.Margin = New Wisej.Web.Padding(7, 0, 7, 0)
