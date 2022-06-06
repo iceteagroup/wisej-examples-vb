@@ -40,5 +40,5 @@
 {
 	"url": "Default.html",
 	"showLoader": false,
-	"startup": "Wisej.ChatServer.Program.Main, Wisej.ChatServer"
+	"startup": "Wisej.SimpleChat.Program.Main, Wisej.SimpleChat"
 }
