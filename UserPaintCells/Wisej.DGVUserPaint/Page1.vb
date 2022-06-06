@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports System.Linq
 Imports System.Drawing
-Imports System.Web.UI.DataVisualization.Charting
+Imports System.Drawing.Drawing2D
 Imports Wisej.Web
 
 Partial Public Class Page1
@@ -36,48 +36,33 @@ Partial Public Class Page1
 
             If Not Equals(text, Nothing) Then
                 Dim values = text.Split(","c).[Select](Function(n) Convert.ToInt32(n)).ToArray()
-                Dim charType = CType([Enum].Parse(GetType(SeriesChartType), CStr(dataGridView1(1, e.RowIndex).Value)), SeriesChartType)
-                DrawChart(e.Graphics, e.ClipRectangle, values, charType)
+
+                'Dim charType = CType([Enum].Parse(GetType(SeriesChartType), CStr(dataGridView1(1, e.RowIndex).Value)), SeriesChartType)
+                'DrawChart(e.Graphics, e.ClipRectangle, values, charType)
+                DrawChart(e.Graphics, e.ClipRectangle, values)
             End If
         End If
     End Sub
 
-    Private Sub DrawChart(ByVal g As Graphics, ByVal rect As Rectangle, ByVal values As Integer(), ByVal chartType As SeriesChartType)
-        Using chart = New Chart()
-            rect.Inflate(-10, -10)
-            chart.Width = rect.Width - 2
-            chart.Height = rect.Height - 2
-            chart.BackColor = Color.Transparent
-            Dim ca = New ChartArea()
-            ca.BackColor = Color.Transparent
-            ca.Position = New ElementPosition(1, 1, 99, 99)
-            ca.AxisY.LineWidth = 0
-            ca.AxisY.MajorGrid.LineWidth = 0
-            ca.AxisY.LabelStyle.Enabled = False
-            ca.AxisY.MajorTickMark.Enabled = False
-            ca.AxisY.MinorTickMark.Enabled = False
-            ca.AxisY.IsMarginVisible = False
-            ca.AxisX.LineWidth = 0
-            ca.AxisX.MajorGrid.LineWidth = 0
-            ca.AxisX.LabelStyle.Enabled = False
-            ca.AxisX.MajorTickMark.Enabled = False
-            ca.AxisX.MinorTickMark.Enabled = False
-            ca.AxisX.LineDashStyle = ChartDashStyle.NotSet
-            ca.AxisX.IsMarginVisible = False
-            chart.ChartAreas.Add(ca)
-            Dim s = New Series()
-            s.BorderWidth = 2
-            s.ChartType = chartType
+    Private Sub DrawChart(ByVal g As Graphics, ByVal rect As Rectangle, ByVal values As Integer())
 
-            For i As Integer = 0 To values.Length - 1
-                Dim p As DataPoint = New DataPoint()
-                p.XValue = i
-                p.YValues = New Double() {values(i)}
-                s.Points.Add(p)
-            Next
+        g.SmoothingMode = SmoothingMode.AntiAlias
+        Dim cx As Integer = rect.Width
+        Dim cy As Integer = rect.Height
+        Dim brush As SolidBrush = New SolidBrush(Color.Blue)
+        Dim pen As Pen = New Pen(brush)
+        pen.Width = 10.0!
+        Dim scale As Single = (CType(cy, Single) / CType(cx, Single))
+        Dim x As Single = 0
+        Dim i As Integer = 0
+        Do While (i < values.Length)
+            x = values(i)
+            x = (x + 7)
+            g.DrawLine(pen, 0, ((cx - x) _
+                            * scale), (cx - x), (cy _
+                            * (scale * 2)))
+            i = (i + 1)
+        Loop
 
-            chart.Series.Add(s)
-            chart.Paint(g, rect)
-        End Using
     End Sub
 End Class
