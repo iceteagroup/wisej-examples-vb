@@ -1,7 +1,8 @@
-﻿Imports System
+﻿
+Imports System
 Imports Wisej.Web
 
-Public Class frmSummaryAllCallsUserDataDialog
+Partial Public Class frmSummaryAllCallsUserDataDialog
 
     Public Sub New()
         InitializeComponent()
@@ -9,7 +10,7 @@ Public Class frmSummaryAllCallsUserDataDialog
 
     Public Property Values As Object()
 
-    Private Sub UserDataDialog_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub UserDataDialog_Load(ByVal sender As Object, ByVal e As EventArgs)
         LoadUserData()
     End Sub
 
@@ -38,6 +39,7 @@ Public Class frmSummaryAllCallsUserDataDialog
 
     Private Sub buttonOK_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonOK.Click
         UpdateUserData()
+
         Close()
     End Sub
 
@@ -45,6 +47,8 @@ Public Class frmSummaryAllCallsUserDataDialog
         ' this is the new Invalid property. it works in conjunction with the
         ' InvalidMessage property to display the control in an error state (themeable).
         dateTimePickerExpiration.Invalid = dateTimePickerExpiration.Value < dateTimePickerActivation.Value
+
         e.Cancel = dateTimePickerExpiration.Invalid
     End Sub
+
 End Class

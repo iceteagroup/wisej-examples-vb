@@ -2,7 +2,7 @@
 Imports System.Data
 Imports System.IO
 
-Namespace WiseJ.DataGridViewSummaryRows.data
+Namespace data
     Public Class dataPurchaseDataSet
         Private _dtHeader, _dtDetail As DataTable
         Private _dsData As DataSet
@@ -11,6 +11,7 @@ Namespace WiseJ.DataGridViewSummaryRows.data
             Get
                 Return _dsData
             End Get
+
             Set(ByVal value As DataSet)
                 _dsData = value
             End Set
@@ -31,32 +32,47 @@ Namespace WiseJ.DataGridViewSummaryRows.data
 
             'Add table from readed XmlFile into DataSet
             Dim dtData As DataTable = New DataTable()
+
             dtData = _dsDataXML.Tables(0).Copy()
             dtData.TableName = sTableName
+
             DsData.Tables.Add(dtData)
+
             result = True
             Return result
         End Function
 
         Public Function SetDataRelation(ByVal RelationName As String, ByVal tableParent As String, ByVal tableChild As String, ByVal tableParentID As String, ByVal tableChildID As String) As Boolean
+
+
             Dim result = False
 
             Try
                 ' Establish a relationship between the two tables.
                 Dim relation As DataRelation = New DataRelation(RelationName, DsData.Tables(tableParent).Columns(tableParentID), DsData.Tables(tableChild).Columns(tableChildID))
                 DsData.Relations.Add(relation)
+
                 result = True
             Catch __unusedException1__ As Exception
+
                 Throw
             End Try
-
             Return result
         End Function
+
 
         Private Function LoadXmlFile(ByVal XMLFIle As String, ByVal dt As DataTable) As Boolean
             Dim result As Boolean
             result = False
+
+
+
+
+
+
             Return result
         End Function
+
+
     End Class
 End Namespace

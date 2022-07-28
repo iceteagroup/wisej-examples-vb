@@ -1,14 +1,8 @@
-﻿Partial Class frmSummaryHugeData2
-    Inherits WiseJ.Web.Form
-    ''' <summary>
-    ''' Required designer variable.
-    ''' </summary>
-    Private components As System.ComponentModel.IContainer
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frmSummaryHugeData2
+    Inherits Wisej.Web.Form
 
-    ''' <summary>
-    ''' Clean up any resources being used.
-    ''' </summary>
-    ''' <paramname="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -19,6 +13,10 @@
             MyBase.Dispose(disposing)
         End Try
     End Sub
+
+    'Required by the Wisej Designer
+    Private components As System.ComponentModel.IContainer
+
 #Region "Wisej Designer generated code"
 
     ''' <summary>
@@ -26,27 +24,27 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Me.dgvMaster = New WiseJ.Web.DataGridView()
-        Me.btnSummary2 = New WiseJ.Web.Button()
-        Me.lblStockedQty = New WiseJ.Web.Label()
-        Me.label4 = New WiseJ.Web.Label()
-        Me.lblUnitPrice = New WiseJ.Web.Label()
-        Me.label2 = New WiseJ.Web.Label()
-        Me.btnAddSummaryRow = New WiseJ.Web.Button()
-        Me.lblHeaderCount = New WiseJ.Web.Label()
-        Me.label1 = New WiseJ.Web.Label()
-        Me.btnLoadData = New WiseJ.Web.Button()
-        Me.btnSummary3 = New WiseJ.Web.Button()
-        Me.btnLoadDataFullCols = New WiseJ.Web.Button()
-        Me.btnRemoveSummary = New WiseJ.Web.Button()
-        Me.groupBox1 = New WiseJ.Web.GroupBox()
+        Me.dgvMaster = New Wisej.Web.DataGridView()
+        Me.btnSummary2 = New Wisej.Web.Button()
+        Me.lblStockedQty = New Wisej.Web.Label()
+        Me.label4 = New Wisej.Web.Label()
+        Me.lblUnitPrice = New Wisej.Web.Label()
+        Me.label2 = New Wisej.Web.Label()
+        Me.btnAddSummaryRow = New Wisej.Web.Button()
+        Me.lblHeaderCount = New Wisej.Web.Label()
+        Me.label1 = New Wisej.Web.Label()
+        Me.btnLoadData = New Wisej.Web.Button()
+        Me.btnSummary3 = New Wisej.Web.Button()
+        Me.btnLoadDataFullCols = New Wisej.Web.Button()
+        Me.btnRemoveSummary = New Wisej.Web.Button()
+        Me.groupBox1 = New Wisej.Web.GroupBox()
         CType(Me.dgvMaster, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvMaster
         '
-        Me.dgvMaster.Dock = WiseJ.Web.DockStyle.Top
+        Me.dgvMaster.Dock = Wisej.Web.DockStyle.Top
         Me.dgvMaster.Location = New System.Drawing.Point(0, 0)
         Me.dgvMaster.Name = "dgvMaster"
         Me.dgvMaster.Size = New System.Drawing.Size(1040, 361)
@@ -71,8 +69,8 @@
         '
         'label4
         '
-        Me.label4.Anchor = CType(((WiseJ.Web.AnchorStyles.Top Or WiseJ.Web.AnchorStyles.Left) _
-            Or WiseJ.Web.AnchorStyles.Right), WiseJ.Web.AnchorStyles)
+        Me.label4.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.label4.AutoSize = True
         Me.label4.Location = New System.Drawing.Point(20, 86)
         Me.label4.Name = "label4"
@@ -91,8 +89,8 @@
         '
         'label2
         '
-        Me.label2.Anchor = CType(((WiseJ.Web.AnchorStyles.Top Or WiseJ.Web.AnchorStyles.Left) _
-            Or WiseJ.Web.AnchorStyles.Right), WiseJ.Web.AnchorStyles)
+        Me.label2.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.label2.AutoSize = True
         Me.label2.Location = New System.Drawing.Point(20, 56)
         Me.label2.Name = "label2"
@@ -119,8 +117,8 @@
         '
         'label1
         '
-        Me.label1.Anchor = CType(((WiseJ.Web.AnchorStyles.Top Or WiseJ.Web.AnchorStyles.Left) _
-            Or WiseJ.Web.AnchorStyles.Right), WiseJ.Web.AnchorStyles)
+        Me.label1.Anchor = CType(((Wisej.Web.AnchorStyles.Top Or Wisej.Web.AnchorStyles.Left) _
+            Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(20, 26)
         Me.label1.Name = "label1"
@@ -177,7 +175,7 @@
         'frmSummaryHugeData2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
-        Me.AutoScaleMode = WiseJ.Web.AutoScaleMode.Font
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1040, 562)
         Me.Controls.Add(Me.groupBox1)
         Me.Controls.Add(Me.btnRemoveSummary)
@@ -198,18 +196,18 @@
 
 #End Region
 
-    Friend WithEvents dgvMaster As WiseJ.Web.DataGridView
-    Friend WithEvents btnSummary2 As WiseJ.Web.Button
-    Friend WithEvents lblStockedQty As WiseJ.Web.Label
-    Friend WithEvents label4 As WiseJ.Web.Label
-    Friend WithEvents lblUnitPrice As WiseJ.Web.Label
-    Friend WithEvents label2 As WiseJ.Web.Label
-    Friend WithEvents btnAddSummaryRow As WiseJ.Web.Button
-    Friend WithEvents lblHeaderCount As WiseJ.Web.Label
-    Friend WithEvents label1 As WiseJ.Web.Label
-    Friend WithEvents btnLoadData As WiseJ.Web.Button
-    Friend WithEvents btnSummary3 As WiseJ.Web.Button
-    Friend WithEvents btnLoadDataFullCols As WiseJ.Web.Button
-    Friend WithEvents btnRemoveSummary As WiseJ.Web.Button
-    Friend WithEvents groupBox1 As WiseJ.Web.GroupBox
+    Friend WithEvents dgvMaster As Wisej.Web.DataGridView
+    Friend WithEvents btnSummary2 As Wisej.Web.Button
+    Friend WithEvents lblStockedQty As Wisej.Web.Label
+    Friend WithEvents label4 As Wisej.Web.Label
+    Friend WithEvents lblUnitPrice As Wisej.Web.Label
+    Friend WithEvents label2 As Wisej.Web.Label
+    Friend WithEvents btnAddSummaryRow As Wisej.Web.Button
+    Friend WithEvents lblHeaderCount As Wisej.Web.Label
+    Friend WithEvents label1 As Wisej.Web.Label
+    Friend WithEvents btnLoadData As Wisej.Web.Button
+    Friend WithEvents btnSummary3 As Wisej.Web.Button
+    Friend WithEvents btnLoadDataFullCols As Wisej.Web.Button
+    Friend WithEvents btnRemoveSummary As Wisej.Web.Button
+    Friend WithEvents groupBox1 As Wisej.Web.GroupBox
 End Class

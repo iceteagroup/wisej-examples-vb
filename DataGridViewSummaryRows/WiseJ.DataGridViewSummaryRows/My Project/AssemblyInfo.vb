@@ -12,11 +12,11 @@ Imports System.Runtime.InteropServices
 ' associated with an assembly.
 
 ' Review the values of the assembly attributes
-<Assembly: AssemblyTitle("WiseJ.DataGridViewSummaryRows")>
+<Assembly: AssemblyTitle("DataGridViewSummaryRows")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("WiseJ.DataGridViewSummaryRows")>
-<Assembly: AssemblyCopyright("Copyright © 2021")>
+<Assembly: AssemblyProduct("DataGridViewSummaryRows")>
+<Assembly: AssemblyCopyright("Copyright © 2022")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

@@ -31,6 +31,7 @@
 // maxModalStack:              Maximum number of nested modal dialogs. Default: 10.
 // dropDuplicateClicks:        Drops all "execute" (clicks) events while there is a pending request. Touch and mouse clicks are still queued and will be executed. Default: false.
 // disableClientObjectModel:   Disables the creation of the JavaScript object model on the client.
+// validateClient              Verifies the client fingerprint when retrieving a session. Default: true.
 // impersonate:                Set impersonate:true to impersonate the user on the server. Default: false.
 // threadPool:                 Configures the thread pool without having to modify the machin.config file.
 //                             All values are optional. i.e. {minWorkerThreads:100}. Default: null.
@@ -39,6 +40,6 @@
 //                             Custom settings are available using Application.Configuration.Settings.
 {
 	"url": "Default.html",
-	"showLoader": false,
-	"startup": "WiseJ.DataGridViewSummaryRows.Program.Main, WiseJ.DataGridViewSummaryRows"
+	"options": { "mobile.mode": true }, 
+	"startup": "DataGridViewSummaryRows.Program.Main, DataGridViewSummaryRows"
 }

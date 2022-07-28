@@ -1,15 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Home
-    Inherits WiseJ.Web.Page
-    ''' <summary> 
-    ''' Required designer variable.
-    ''' </summary>
-    Private components As System.ComponentModel.IContainer
+    Inherits Wisej.Web.Page
 
-    ''' <summary>
-    ''' Clean up any resources being used.
-    ''' </summary>
-    ''' <paramname="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -21,6 +14,9 @@ Partial Class Home
         End Try
     End Sub
 
+    'Required by the Wisej Designer
+    Private components As System.ComponentModel.IContainer
+
 #Region "Wisej Designer generated code"
 
     ''' <summary> 
@@ -28,10 +24,10 @@ Partial Class Home
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Me.btnCase1 = New WiseJ.Web.Button()
-        Me.btnCase2 = New WiseJ.Web.Button()
-        Me.btnSummaryGroup = New WiseJ.Web.Button()
-        Me.btnAllCallsSummary = New WiseJ.Web.Button()
+        Me.btnCase1 = New Wisej.Web.Button()
+        Me.btnCase2 = New Wisej.Web.Button()
+        Me.btnSummaryGroup = New Wisej.Web.Button()
+        Me.btnAllCallsSummary = New Wisej.Web.Button()
         Me.SuspendLayout()
         '
         'btnCase1
@@ -69,21 +65,21 @@ Partial Class Home
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
-        Me.AutoScaleMode = WiseJ.Web.AutoScaleMode.Font
+        Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.btnAllCallsSummary)
         Me.Controls.Add(Me.btnSummaryGroup)
         Me.Controls.Add(Me.btnCase2)
         Me.Controls.Add(Me.btnCase1)
         Me.Name = "Home"
-        Me.Size = New System.Drawing.Size(1133, 559)
+        Me.Size = New System.Drawing.Size(654, 667)
         Me.ResumeLayout(False)
 
     End Sub
 
 #End Region
 
-    Friend WithEvents btnCase1 As WiseJ.Web.Button
-    Friend WithEvents btnCase2 As WiseJ.Web.Button
-    Friend WithEvents btnSummaryGroup As WiseJ.Web.Button
-    Friend WithEvents btnAllCallsSummary As WiseJ.Web.Button
+    Private WithEvents btnCase1 As Wisej.Web.Button
+    Private WithEvents btnCase2 As Wisej.Web.Button
+    Private WithEvents btnSummaryGroup As Wisej.Web.Button
+    Private WithEvents btnAllCallsSummary As Wisej.Web.Button
 End Class

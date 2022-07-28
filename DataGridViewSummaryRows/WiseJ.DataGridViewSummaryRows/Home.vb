@@ -1,17 +1,19 @@
 ﻿Imports System
 Imports Wisej.Web
 
-Public Class Home
 
-
+Partial Public Class Home
     Public Sub New()
         InitializeComponent()
     End Sub
 
+
     Private Sub btnSummaryGroup_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnSummaryGroup.Click
+
         Dim window As frmSummaryGroup = New frmSummaryGroup()
         window.StartPosition = FormStartPosition.CenterParent
         window.Show()
+
     End Sub
 
     Private Sub btnCase1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCase1.Click
