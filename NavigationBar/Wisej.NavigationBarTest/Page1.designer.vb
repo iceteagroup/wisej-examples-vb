@@ -50,18 +50,18 @@ Partial Class Page1
         '
         'flexLayoutPanel1
         '
-        Me.animation2.GetAnimation(Me.flexLayoutPanel1).Event = "disappear"
-        Me.animation2.GetAnimation(Me.flexLayoutPanel1).Name = "slideRightOut"
         Me.animation1.GetAnimation(Me.flexLayoutPanel1).Event = "appear"
         Me.animation1.GetAnimation(Me.flexLayoutPanel1).Name = "slideRightIn"
+        Me.animation2.GetAnimation(Me.flexLayoutPanel1).Event = "disappear"
+        Me.animation2.GetAnimation(Me.flexLayoutPanel1).Name = "slideRightOut"
         Me.flexLayoutPanel1.Controls.Add(Me.pictureBox1)
         Me.flexLayoutPanel1.Controls.Add(Me.pictureBox2)
         Me.flexLayoutPanel1.Dock = Wisej.Web.DockStyle.Right
         Me.flexLayoutPanel1.LayoutStyle = Wisej.Web.FlexLayoutStyle.Vertical
-        Me.flexLayoutPanel1.Location = New System.Drawing.Point(1411, 0)
+        Me.flexLayoutPanel1.Location = New System.Drawing.Point(964, 0)
         Me.flexLayoutPanel1.Name = "flexLayoutPanel1"
         Me.flexLayoutPanel1.Padding = New Wisej.Web.Padding(5, 40, 5, 0)
-        Me.flexLayoutPanel1.Size = New System.Drawing.Size(42, 558)
+        Me.flexLayoutPanel1.Size = New System.Drawing.Size(42, 363)
         Me.flexLayoutPanel1.TabIndex = 4
         Me.flexLayoutPanel1.TabStop = True
         Me.flexLayoutPanel1.Visible = False
@@ -87,7 +87,7 @@ Partial Class Page1
         Me.button1.Collapsed = True
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button1.ImageSource = "icon-left"
-        Me.button1.Location = New System.Drawing.Point(1411, 517)
+        Me.button1.Location = New System.Drawing.Point(964, 322)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(42, 40)
         Me.button1.TabIndex = 5
@@ -98,20 +98,18 @@ Partial Class Page1
         Me.label1.Font = New System.Drawing.Font("default", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.label1.Location = New System.Drawing.Point(237, 18)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(89, 37)
+        Me.label1.Size = New System.Drawing.Size(90, 37)
         Me.label1.TabIndex = 7
         Me.label1.Text = "Home"
         '
         'navigationBarItem5
         '
-        Me.navigationBarItem5.BackColor = System.Drawing.Color.Transparent
         Me.navigationBarItem5.Icon = "resource.wx/Wisej.Ext.MaterialDesign/user-shape.svg?color=#00CEFF"
         Me.navigationBarItem5.Name = "navigationBarItem5"
         Me.navigationBarItem5.Text = "Users"
         '
         'navigationBarItem2
         '
-        Me.navigationBarItem2.BackColor = System.Drawing.Color.Transparent
         Me.navigationBarItem2.Expanded = True
         Me.navigationBarItem2.Icon = "resource.wx/Wisej.Ext.MaterialDesign/google-drive-file.svg?color=#4E3FBF"
         Me.navigationBarItem2.Items.AddRange(New Wisej.Web.Ext.NavigationBar.NavigationBarItem() {Me.navigationBarItem3, Me.navigationBarItem4})
@@ -120,7 +118,6 @@ Partial Class Page1
         '
         'navigationBarItem3
         '
-        Me.navigationBarItem3.BackColor = System.Drawing.Color.Transparent
         Me.navigationBarItem3.Icon = "resource.wx/Wisej.Ext.MaterialDesign/high-signal-indicator.svg?color=#00FF3E"
         Me.navigationBarItem3.InfoText = "3"
         Me.navigationBarItem3.Name = "navigationBarItem3"
@@ -128,14 +125,12 @@ Partial Class Page1
         '
         'navigationBarItem4
         '
-        Me.navigationBarItem4.BackColor = System.Drawing.Color.Transparent
         Me.navigationBarItem4.Icon = "resource.wx/Wisej.Ext.MaterialDesign/exit-to-app-button.svg?color=#DFFF00"
         Me.navigationBarItem4.Name = "navigationBarItem4"
         Me.navigationBarItem4.Text = "External"
         '
         'navigationBarItem1
         '
-        Me.navigationBarItem1.BackColor = System.Drawing.Color.Transparent
         Me.navigationBarItem1.ForeColor = System.Drawing.Color.AliceBlue
         Me.navigationBarItem1.Icon = "resource.wx/Wisej.Ext.ElegantIcons/3x3-grid.svg?color=#3FBF77"
         Me.navigationBarItem1.InfoText = "new"
@@ -150,7 +145,8 @@ Partial Class Page1
         Me.panel1.Items.AddRange(New Wisej.Web.Ext.NavigationBar.NavigationBarItem() {Me.navigationBarItem1, Me.navigationBarItem2, Me.navigationBarItem5})
         Me.panel1.Logo = "Images\itg-128x128.png"
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(203, 558)
+        Me.panel1.Size = New System.Drawing.Size(203, 363)
+        Me.panel1.TabIndex = 8
         Me.panel1.Text = "Nav App"
         Me.panel1.UserAvatar = "https://www.gravatar.com/avatar/00000000000000000000000000000000"
         Me.panel1.UserName = "Some User"
@@ -158,14 +154,14 @@ Partial Class Page1
         '
         'Page1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = Wisej.Web.AutoScaleMode.Font
         Me.Controls.Add(Me.button1)
         Me.Controls.Add(Me.label1)
         Me.Controls.Add(Me.panel1)
         Me.Controls.Add(Me.flexLayoutPanel1)
         Me.Name = "Page1"
-        Me.Size = New System.Drawing.Size(1453, 558)
+        Me.Size = New System.Drawing.Size(1006, 363)
         Me.Text = "Page1"
         Me.flexLayoutPanel1.ResumeLayout(False)
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
