@@ -26,7 +26,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />
     <Compile Remove="Startup.vb" />
-    <Content Include="Startup.vb"/>
+    <Content Include="Startup.vb" />
 	
   </ItemGroup>
 
@@ -63,6 +63,10 @@
 	<PackageReference Include="Wisej-3-MaterialDesign" Version="3.*-*" />
 	<PackageReference Include="Wisej-3-NavigationBar" Version="3.*-*" />
 	<PackageReference Include="Wisej-3-SideButton" Version="3.*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
   </ItemGroup>
 
 </Project>
