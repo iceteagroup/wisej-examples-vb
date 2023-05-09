@@ -1,8 +1,10 @@
 ﻿Imports System
 Imports Wisej.Web
 
-Namespace MultiHtml.Suppliers
-    Public Partial Class SupplierPage
+Namespace Suppliers
+
+    Partial Public Class SupplierPage
+        Inherits Wisej.Web.Page
 
         Public Sub New()
             InitializeComponent()

@@ -10,6 +10,7 @@
     <UseGlobalApplicationHostFile />
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <ProjectView>ShowAllFiles</ProjectView>
+    <ActiveDebugFramework>net6.0</ActiveDebugFramework>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
@@ -36,4 +37,15 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <ItemGroup>
+    <Compile Update="ChildMdi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Modeless.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

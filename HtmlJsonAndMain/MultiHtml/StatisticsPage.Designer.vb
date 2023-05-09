@@ -1,8 +1,6 @@
 ﻿Imports System
 
-Namespace MultiHtml
-
-    <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class StatisticsPage
         Inherits Wisej.Web.Page
 
@@ -163,7 +161,7 @@ Namespace MultiHtml
             Me.Controls.Add(Me.url)
             Me.Controls.Add(Me.label1)
             Me.Name = "StatisticsPage"
-            Me.Size = New System.Drawing.Size(944, 739)
+            Me.Size = New System.Drawing.Size(965, 594)
             Me.Text = "Statistics Page"
             Me.ResumeLayout(False)
             Me.PerformLayout()
@@ -184,4 +182,4 @@ Namespace MultiHtml
         Friend WithEvents navigateToCustomers As Wisej.Web.Button
         Friend WithEvents jsonFile As Wisej.Web.TextBox
     End Class
-End Namespace
+

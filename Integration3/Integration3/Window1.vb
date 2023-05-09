@@ -99,6 +99,8 @@ Partial Public Class Window1
         widgetPie.Call("reload", comboBox1.Items(comboBox1.SelectedIndex))
     End Sub
 
+    'TODO Check Wisej widgetEvent 
+    'Private Sub widgetDonut_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs) Handles widgetDonut.WidgetEvent
     Private Sub widgetDonut_WidgetEvent(ByVal sender As Object, ByVal e As WidgetEventArgs) Handles widgetDonut.WidgetEvent
         If Equals(e.Type, "Clicked") Then
 

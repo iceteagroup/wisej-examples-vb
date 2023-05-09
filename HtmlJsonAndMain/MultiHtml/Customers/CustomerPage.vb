@@ -1,8 +1,8 @@
 ﻿Imports System
 Imports Wisej.Web
 
-Namespace MultiHtml.Customers
-    Public Partial Class CustomerPage
+Namespace Customers
+    Partial Public Class CustomerPage
 
 
         Public Sub New()

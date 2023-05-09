@@ -40,5 +40,5 @@
 {
 	"url": "ChangedNames.html",
 	"showLoader": false,
-	"startup": "ChangedNames.Startup.Main, ChangedNames"
+	"startup": "ChangedNames.Program.Main, ChangedNames"
 }

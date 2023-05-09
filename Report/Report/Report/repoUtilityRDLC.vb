@@ -5,7 +5,8 @@ Imports System.Collections.Generic
 Imports System.IO
 Imports System.Data
 Imports System.Text
-Imports Microsoft.Reporting.WebForms
+Imports Microsoft.Reporting.NETCore
+
 
 Public Class repoUtilityRDLC
     Implements IDisposable
@@ -41,10 +42,14 @@ Public Class repoUtilityRDLC
         Dim mimeType As String
         Dim streams As String()
         Dim warnings As Warning()
+
         _reportPath = Path.Combine(_reportPath, _reportFile)
+        'Dim report As LocalReport = New  LocalReport()
         Dim report As LocalReport = New LocalReport()
+
         report.ReportPath = _reportPath
         report.DataSources.Add(New ReportDataSource("Sales", LoadSalesData()))
+
         Dim deviceInfo = "<DeviceInfo>
                 <OutputFormat>EMF</OutputFormat>
                 <PageWidth>8.5in</PageWidth>
@@ -57,7 +62,8 @@ Public Class repoUtilityRDLC
 
         'Render the report
 
-        Dim bytes = report.Render(reportType, deviceInfo, mimeType, encoding, fileNameExtension, streams, warnings)
+        'Dim bytes = report.Render(reportType, deviceInfo, mimeType, encoding, fileNameExtension, streams, warnings)
+        Dim bytes = report.Render(reportType, deviceInfo)
         Return New MemoryStream(bytes)
     End Function
 

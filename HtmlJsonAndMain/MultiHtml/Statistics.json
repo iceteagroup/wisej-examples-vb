@@ -25,4 +25,5 @@
 {
   "url": "Statistics.html",
   "mainWindow": "MultiHtml.StatisticsPage, MultiHtml"
+  //"startup": "MultiHtml.StatisticsPage.Main, MultiHtml"
 }

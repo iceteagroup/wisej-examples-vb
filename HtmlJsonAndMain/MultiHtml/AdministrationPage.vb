@@ -1,9 +1,8 @@
 ﻿Imports System
 Imports Wisej.Web
+Imports MultiHtml.Customers
 
-Namespace MultiHtml
-
-    Partial Public Class AdministrationPage
+Partial Public Class AdministrationPage
 
         Public Sub New()
             InitializeComponent()
@@ -45,4 +44,4 @@ Namespace MultiHtml
             Application.Navigate("/Suppliers/Default.html")
         End Sub
     End Class
-End Namespace
+

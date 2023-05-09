@@ -396,5 +396,5 @@ Partial Class Window1
     Friend WithEvents label1 As Wisej.Web.Label
     Friend WithEvents comboBox1 As Wisej.Web.ComboBox
     Friend WithEvents tableLayoutPanel3 As Wisej.Web.TableLayoutPanel
-    Private WithEvents widgetDonut As Widget
+    Private WithEvents widgetDonut As Wisej.Web.Widget
 End Class

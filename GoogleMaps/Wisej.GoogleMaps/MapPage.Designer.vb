@@ -89,7 +89,7 @@ Partial Class MapPage
         Me.groupBox1.Location = New System.Drawing.Point(3, 3)
         Me.groupBox1.MinimumSize = New System.Drawing.Size(150, 0)
         Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(354, 172)
+        Me.groupBox1.Size = New System.Drawing.Size(308, 172)
         Me.groupBox1.TabIndex = 1
         Me.groupBox1.Text = "Controls"
         Me.groupBox1.UseMnemonic = False
@@ -97,7 +97,6 @@ Partial Class MapPage
         'checkBoxStreetView
         '
         Me.checkBoxStreetView.Checked = True
-        Me.checkBoxStreetView.CheckState = Wisej.Web.CheckState.Checked
         Me.checkBoxStreetView.Location = New System.Drawing.Point(16, 115)
         Me.checkBoxStreetView.Name = "checkBoxStreetView"
         Me.checkBoxStreetView.Size = New System.Drawing.Size(99, 22)
@@ -117,7 +116,6 @@ Partial Class MapPage
         'checkBoxZoom
         '
         Me.checkBoxZoom.Checked = True
-        Me.checkBoxZoom.CheckState = Wisej.Web.CheckState.Checked
         Me.checkBoxZoom.Location = New System.Drawing.Point(16, 55)
         Me.checkBoxZoom.Name = "checkBoxZoom"
         Me.checkBoxZoom.Size = New System.Drawing.Size(66, 22)
@@ -127,7 +125,6 @@ Partial Class MapPage
         'checkBoxMapType
         '
         Me.checkBoxMapType.Checked = True
-        Me.checkBoxMapType.CheckState = Wisej.Web.CheckState.Checked
         Me.checkBoxMapType.Location = New System.Drawing.Point(16, 25)
         Me.checkBoxMapType.Name = "checkBoxMapType"
         Me.checkBoxMapType.Size = New System.Drawing.Size(90, 22)
@@ -139,10 +136,10 @@ Partial Class MapPage
         Me.groupBox2.Controls.Add(Me.comboBoxMapType)
         Me.groupBox2.Controls.Add(Me.checkedListBoxMapType)
         Me.flowLayoutPanel1.SetFillWeight(Me.groupBox2, 33)
-        Me.groupBox2.Location = New System.Drawing.Point(363, 3)
+        Me.groupBox2.Location = New System.Drawing.Point(317, 3)
         Me.groupBox2.MinimumSize = New System.Drawing.Size(150, 0)
         Me.groupBox2.Name = "groupBox2"
-        Me.groupBox2.Size = New System.Drawing.Size(354, 172)
+        Me.groupBox2.Size = New System.Drawing.Size(308, 172)
         Me.groupBox2.TabIndex = 2
         Me.groupBox2.Text = "Map Type"
         Me.groupBox2.UseMnemonic = False
@@ -155,7 +152,7 @@ Partial Class MapPage
         Me.comboBoxMapType.Items.AddRange(New Object() {"Roadmap", "Hybrid", "Satellite", "Terrain"})
         Me.comboBoxMapType.Location = New System.Drawing.Point(18, 25)
         Me.comboBoxMapType.Name = "comboBoxMapType"
-        Me.comboBoxMapType.Size = New System.Drawing.Size(88, 22)
+        Me.comboBoxMapType.Size = New System.Drawing.Size(42, 22)
         Me.comboBoxMapType.TabIndex = 1
         '
         'checkedListBoxMapType
@@ -178,7 +175,7 @@ Partial Class MapPage
         Me.googleMap1.Name = "googleMap1"
         Me.googleMap1.Options = CType(Wisej.Core.WisejSerializer.Parse("{""zoom"":4,""center"":{""lat"":0,""lng"":0},""mapTypeId"":""roadmap"",""mapTypeControlOptions" &
         """:{""style"":2,""mapTypeIds"":[""roadmap"",""hybrid"",""satellite"",""terrain""]}}"), Wisej.Core.DynamicObject)
-        Me.googleMap1.Size = New System.Drawing.Size(1080, 527)
+        Me.googleMap1.Size = New System.Drawing.Size(942, 405)
         Me.googleMap1.TabIndex = 0
         Me.googleMap1.Text = "googleMap1"
         '
@@ -189,7 +186,7 @@ Partial Class MapPage
         Me.trackBar1.Location = New System.Drawing.Point(22, 105)
         Me.trackBar1.Maximum = 20
         Me.trackBar1.Name = "trackBar1"
-        Me.trackBar1.Size = New System.Drawing.Size(317, 34)
+        Me.trackBar1.Size = New System.Drawing.Size(271, 34)
         Me.trackBar1.TabIndex = 3
         Me.trackBar1.TickStyle = Wisej.Web.TickStyle.Both
         Me.trackBar1.Value = 10
@@ -203,10 +200,10 @@ Partial Class MapPage
         Me.groupBox3.Controls.Add(Me.numericUpDownMinZoom)
         Me.flowLayoutPanel1.SetFillWeight(Me.groupBox3, 33)
         Me.flowLayoutPanel1.SetFlowBreak(Me.groupBox3, True)
-        Me.groupBox3.Location = New System.Drawing.Point(723, 3)
+        Me.groupBox3.Location = New System.Drawing.Point(631, 3)
         Me.groupBox3.MinimumSize = New System.Drawing.Size(210, 0)
         Me.groupBox3.Name = "groupBox3"
-        Me.groupBox3.Size = New System.Drawing.Size(354, 172)
+        Me.groupBox3.Size = New System.Drawing.Size(308, 172)
         Me.groupBox3.TabIndex = 4
         Me.groupBox3.Text = "Zoom"
         Me.groupBox3.UseMnemonic = False
@@ -255,7 +252,7 @@ Partial Class MapPage
         Me.flowLayoutPanel1.SetFillWeight(Me.groupBox4, 100)
         Me.groupBox4.Location = New System.Drawing.Point(3, 181)
         Me.groupBox4.Name = "groupBox4"
-        Me.groupBox4.Size = New System.Drawing.Size(1074, 207)
+        Me.groupBox4.Size = New System.Drawing.Size(936, 207)
         Me.groupBox4.TabIndex = 5
         Me.groupBox4.Text = "Markers"
         Me.groupBox4.UseMnemonic = False
@@ -274,7 +271,7 @@ Partial Class MapPage
         Me.tableLayoutPanel1.RowCount = 2
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 115.0!))
         Me.tableLayoutPanel1.RowStyles.Add(New Wisej.Web.RowStyle(Wisej.Web.SizeType.Absolute, 34.0!))
-        Me.tableLayoutPanel1.Size = New System.Drawing.Size(1068, 186)
+        Me.tableLayoutPanel1.Size = New System.Drawing.Size(930, 186)
         Me.tableLayoutPanel1.TabIndex = 0
         Me.tableLayoutPanel1.TabStop = True
         '
@@ -286,9 +283,9 @@ Partial Class MapPage
         Me.panel3.Controls.Add(Me.buttonAddMarker)
         Me.panel3.Controls.Add(Me.buttonRemoveMarker)
         Me.panel3.Dock = Wisej.Web.DockStyle.Fill
-        Me.panel3.Location = New System.Drawing.Point(537, 118)
+        Me.panel3.Location = New System.Drawing.Point(468, 118)
         Me.panel3.Name = "panel3"
-        Me.panel3.Size = New System.Drawing.Size(528, 65)
+        Me.panel3.Size = New System.Drawing.Size(459, 65)
         Me.panel3.TabIndex = 2
         Me.panel3.TabStop = True
         '
@@ -303,7 +300,7 @@ Partial Class MapPage
         'buttonCenterMap
         '
         Me.buttonCenterMap.Anchor = Wisej.Web.AnchorStyles.Right
-        Me.buttonCenterMap.Location = New System.Drawing.Point(116, 11)
+        Me.buttonCenterMap.Location = New System.Drawing.Point(47, 11)
         Me.buttonCenterMap.Name = "buttonCenterMap"
         Me.buttonCenterMap.Size = New System.Drawing.Size(97, 43)
         Me.buttonCenterMap.TabIndex = 11
@@ -312,7 +309,7 @@ Partial Class MapPage
         'buttonClearMarkers
         '
         Me.buttonClearMarkers.Anchor = Wisej.Web.AnchorStyles.Right
-        Me.buttonClearMarkers.Location = New System.Drawing.Point(425, 11)
+        Me.buttonClearMarkers.Location = New System.Drawing.Point(356, 11)
         Me.buttonClearMarkers.Name = "buttonClearMarkers"
         Me.buttonClearMarkers.Size = New System.Drawing.Size(97, 43)
         Me.buttonClearMarkers.TabIndex = 10
@@ -321,7 +318,7 @@ Partial Class MapPage
         'buttonAddMarker
         '
         Me.buttonAddMarker.Anchor = Wisej.Web.AnchorStyles.Right
-        Me.buttonAddMarker.Location = New System.Drawing.Point(219, 11)
+        Me.buttonAddMarker.Location = New System.Drawing.Point(150, 11)
         Me.buttonAddMarker.Name = "buttonAddMarker"
         Me.buttonAddMarker.Size = New System.Drawing.Size(97, 43)
         Me.buttonAddMarker.TabIndex = 8
@@ -330,7 +327,7 @@ Partial Class MapPage
         'buttonRemoveMarker
         '
         Me.buttonRemoveMarker.Anchor = Wisej.Web.AnchorStyles.Right
-        Me.buttonRemoveMarker.Location = New System.Drawing.Point(322, 11)
+        Me.buttonRemoveMarker.Location = New System.Drawing.Point(253, 11)
         Me.buttonRemoveMarker.Name = "buttonRemoveMarker"
         Me.buttonRemoveMarker.Size = New System.Drawing.Size(97, 43)
         Me.buttonRemoveMarker.TabIndex = 9
@@ -341,9 +338,9 @@ Partial Class MapPage
         Me.panel2.Controls.Add(Me.label3)
         Me.panel2.Controls.Add(Me.textBoxAddress)
         Me.panel2.Dock = Wisej.Web.DockStyle.Fill
-        Me.panel2.Location = New System.Drawing.Point(537, 3)
+        Me.panel2.Location = New System.Drawing.Point(468, 3)
         Me.panel2.Name = "panel2"
-        Me.panel2.Size = New System.Drawing.Size(528, 109)
+        Me.panel2.Size = New System.Drawing.Size(459, 109)
         Me.panel2.TabIndex = 1
         Me.panel2.TabStop = True
         '
@@ -364,7 +361,7 @@ Partial Class MapPage
         Me.textBoxAddress.Location = New System.Drawing.Point(89, 11)
         Me.textBoxAddress.Multiline = True
         Me.textBoxAddress.Name = "textBoxAddress"
-        Me.textBoxAddress.Size = New System.Drawing.Size(430, 95)
+        Me.textBoxAddress.Size = New System.Drawing.Size(361, 95)
         Me.textBoxAddress.TabIndex = 1
         '
         'panel1
@@ -378,7 +375,7 @@ Partial Class MapPage
         Me.panel1.Dock = Wisej.Web.DockStyle.Fill
         Me.panel1.Location = New System.Drawing.Point(3, 3)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(528, 109)
+        Me.panel1.Size = New System.Drawing.Size(459, 109)
         Me.panel1.TabIndex = 0
         Me.panel1.TabStop = True
         '
@@ -388,7 +385,7 @@ Partial Class MapPage
             Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.maskedTextBoxLng.Location = New System.Drawing.Point(90, 65)
         Me.maskedTextBoxLng.Name = "maskedTextBoxLng"
-        Me.maskedTextBoxLng.Size = New System.Drawing.Size(409, 22)
+        Me.maskedTextBoxLng.Size = New System.Drawing.Size(340, 22)
         Me.maskedTextBoxLng.TabIndex = 5
         '
         'label4
@@ -415,7 +412,7 @@ Partial Class MapPage
             Or Wisej.Web.AnchorStyles.Right), Wisej.Web.AnchorStyles)
         Me.maskedTextBoxLat.Location = New System.Drawing.Point(90, 37)
         Me.maskedTextBoxLat.Name = "maskedTextBoxLat"
-        Me.maskedTextBoxLat.Size = New System.Drawing.Size(409, 22)
+        Me.maskedTextBoxLat.Size = New System.Drawing.Size(340, 22)
         Me.maskedTextBoxLat.TabIndex = 4
         '
         'maskedTextBoxID
@@ -444,7 +441,7 @@ Partial Class MapPage
         Me.flowLayoutPanel1.Controls.Add(Me.groupBox4)
         Me.flowLayoutPanel1.Location = New System.Drawing.Point(48, 46)
         Me.flowLayoutPanel1.Name = "flowLayoutPanel1"
-        Me.flowLayoutPanel1.Size = New System.Drawing.Size(1080, 388)
+        Me.flowLayoutPanel1.Size = New System.Drawing.Size(942, 388)
         Me.flowLayoutPanel1.TabIndex = 6
         Me.flowLayoutPanel1.TabStop = True
         '
@@ -456,7 +453,7 @@ Partial Class MapPage
         Me.Controls.Add(Me.googleMap1)
         Me.Controls.Add(Me.flowLayoutPanel1)
         Me.Name = "MapPage"
-        Me.Size = New System.Drawing.Size(1180, 796)
+        Me.Size = New System.Drawing.Size(1042, 541)
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         Me.groupBox2.ResumeLayout(False)

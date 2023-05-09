@@ -1,6 +1,6 @@
 ﻿Imports System
 
-Namespace MultiHtml.Customers
+Namespace Customers
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class CustomerPage
@@ -162,7 +162,7 @@ Namespace MultiHtml.Customers
             Me.Controls.Add(Me.url)
             Me.Controls.Add(Me.label1)
             Me.Name = "CustomerPage"
-            Me.Size = New System.Drawing.Size(944, 739)
+            Me.Size = New System.Drawing.Size(965, 594)
             Me.Text = "Customer Page"
             Me.ResumeLayout(False)
             Me.PerformLayout()

@@ -91,7 +91,7 @@ Partial Public Class MapPage
         googleMap1.Update()
     End Sub
 
-    Private Sub MapPage_Load(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub MapPage_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         comboBoxMapType.SelectedIndex = 0
         checkedListBoxMapType.SetItemChecked(0, True)
         checkedListBoxMapType.SetItemChecked(1, True)

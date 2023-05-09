@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Drawing
 Imports Wisej.Web
+
 Public Class Form1
     Private _newBlocksNumber As Integer
 
@@ -11,7 +12,7 @@ Public Class Form1
     Private Sub ManageColorProperty(sender As Panel, propertyName As String)
         With Me.dlgColor
             .Color = sender.BackColor
-            If .ShowDialog(Me) = Windows.Forms.DialogResult.OK Then
+            If .ShowDialog(Me) = Wisej.Web.DialogResult.OK Then
                 sender.BackColor = .Color
                 CallByName(Me.TetrisBox1, propertyName, CallType.Set, .Color)
             End If
@@ -47,7 +48,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.cboGradientDirection.SelectedIndex = 1
-        For Each name As String In System.Enum.GetNames(GetType(System.Windows.Forms.Keys))
+        For Each name As String In System.Enum.GetNames(GetType(Wisej.Web.Keys))
             Me.cboKeysLeft.Items.Add(name)
             Me.cboKeysRight.Items.Add(name)
             Me.cboKeysRotate.Items.Add(name)
@@ -93,11 +94,11 @@ Public Class Form1
     End Sub
 
     Private Sub ManageKeyProperty(sender As ComboBox, propertyName As String)
-        Dim names() As String = System.Enum.GetNames(GetType(System.Windows.Forms.Keys))
-        Dim values() As Integer = System.Enum.GetValues(GetType(System.Windows.Forms.Keys))
+        Dim names() As String = System.Enum.GetNames(GetType(Wisej.Web.Keys))
+        Dim values() As Integer = System.Enum.GetValues(GetType(Wisej.Web.Keys))
         For index = 0 To names.Length - 1
             If sender.SelectedItem.Equals(names(index)) Then
-                CallByName(Me.TetrisBox1, propertyName, CallType.Set, CType(values(index), System.Windows.Forms.Keys))
+                CallByName(Me.TetrisBox1, propertyName, CallType.Set, CType(values(index), Wisej.Web.Keys))
             End If
         Next
     End Sub

@@ -1,10 +1,10 @@
 ﻿Imports System
 
-Namespace MultiHtml.Suppliers
+Namespace Suppliers
 
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class SupplierPage
-        Inherits Wisej.Web.Page
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -162,7 +162,7 @@ Namespace MultiHtml.Suppliers
             Me.Controls.Add(Me.url)
             Me.Controls.Add(Me.label1)
             Me.Name = "SupplierPage"
-            Me.Size = New System.Drawing.Size(944, 739)
+            Me.Size = New System.Drawing.Size(965, 594)
             Me.Text = "Supplier Page"
             Me.ResumeLayout(False)
             Me.PerformLayout()
@@ -183,4 +183,6 @@ Namespace MultiHtml.Suppliers
         Friend WithEvents navigateToCustomers As Wisej.Web.Button
         Friend WithEvents jsonFile As Wisej.Web.TextBox
     End Class
+
 End Namespace
+

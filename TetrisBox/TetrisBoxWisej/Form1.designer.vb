@@ -943,5 +943,5 @@ Partial Class Form1
     Friend WithEvents lstEvents As Wisej.Web.ListBox
     Friend WithEvents Label23 As Wisej.Web.Label
     Friend WithEvents lnkArticle As Wisej.Web.LinkLabel
-    Friend WithEvents linkWiseJ As LinkLabel
+    Friend WithEvents linkWiseJ As Wisej.Web.LinkLabel
 End Class
