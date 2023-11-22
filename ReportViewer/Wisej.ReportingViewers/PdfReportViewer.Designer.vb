@@ -2,6 +2,7 @@
 Imports System.ComponentModel
 Imports System.Web
 Imports Wisej.Core
+Imports HttpContext = System.Web.HttpContext
 
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
@@ -36,7 +37,7 @@ Partial Class PdfReportViewer
         End Get
     End Property
 
-    Private Sub ProcessRequest(ByVal context As HttpContext) Implements IWisejHandler.ProcessRequest
+    Public Sub ProcessRequest(context As Core.HttpContext) Implements IWisejHandler.ProcessRequest
         Dim request = context.Request
         Dim response = context.Response
         Dim export = request("export")
@@ -45,11 +46,11 @@ Partial Class PdfReportViewer
         If Equals(export, Nothing) Then
             Dim bytes = _report.Render("pdf")
             Dim filename = Path.GetFileNameWithoutExtension(_report.ReportPath)
-            response.Expires = -1
+            'response.Expires = -1
             response.ContentType = $"application/pdf"
             response.AppendHeader("Access-Control-Allow-Origin", "*")
-            response.AddHeader("Content-Disposition", $"inline; filename=""{filename}.pdf""")
-            response.AddHeader("Content-Length", bytes.Length.ToString())
+            response.AppendHeader("Content-Disposition", $"inline; filename=""{filename}.pdf""")
+            response.AppendHeader("Content-Length", bytes.Length.ToString())
             response.OutputStream.Write(bytes, 0, bytes.Length)
         Else
 
@@ -58,15 +59,14 @@ Partial Class PdfReportViewer
                     Dim format = If(Equals(export, "word"), "doc", "xls")
                     Dim bytes = _report.Render(export)
                     Dim filename = Path.GetFileNameWithoutExtension(_report.ReportPath)
-                    response.Expires = -1
+                    'response.Expires = -1
                     response.ContentType = $"application/{format}"
                     response.AppendHeader("Access-Control-Allow-Origin", "*")
-                    response.AddHeader("Content-Disposition", $"attachment; filename=""{filename}.{format}""")
-                    response.AddHeader("Content-Length", bytes.Length.ToString())
+                    response.AppendHeader("Content-Disposition", $"attachment; filename=""{filename}.{format}""")
+                    response.AppendHeader("Content-Length", bytes.Length.ToString())
                     response.OutputStream.Write(bytes, 0, bytes.Length)
             End Select
         End If
-
     End Sub
 
 #End Region
