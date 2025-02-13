@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Wisej.JSWidgets", "Wisej.JSWidgets\Wisej.JSWidgets.vbproj", "{C72ED565-4BD2-40B8-A180-DC0A6198096A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72ED565-4BD2-40B8-A180-DC0A6198096A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72ED565-4BD2-40B8-A180-DC0A6198096A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72ED565-4BD2-40B8-A180-DC0A6198096A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72ED565-4BD2-40B8-A180-DC0A6198096A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB12F482-1B58-4B03-9503-19C16AED08EB}
+	EndGlobalSection
+EndGlobal

@@ -43,7 +43,7 @@
   
  <ItemGroup>
 <PackageReference Include="Wisej-3" Version="3.5.*-*" />
-	<PackageReference Include="Wisej-3-GoogleMaps" Version="3.5.*-*
+	<PackageReference Include="Wisej-3-GoogleMaps" Version="3.5.*-*" />
   </ItemGroup>
 
 </Project>
